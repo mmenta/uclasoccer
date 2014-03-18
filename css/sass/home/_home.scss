@@ -1,0 +1,333 @@
+/* homepage ============================= */
+
+#home {
+
+
+section.carousel {
+	overflow: hidden;
+	
+	#slides {
+		display: none;
+		min-width: 1340px;
+		
+		li {
+		
+			.slide-bg {
+				position: absolute;
+				width: 100%;
+				top: 0;
+				left: 0;
+				
+				z-index: -1;
+			}
+			
+			h1 {
+				position: relative;
+				margin: 250px auto 0;
+				
+				font-size: 60px;
+				color: #fff;
+				text-align: center;
+			}
+
+			.cta {
+				display: block;
+				margin: 50px auto 0;
+				clear: both;
+			}
+			
+			&:nth-of-type(2) {
+				
+				h1 {
+					position:relative;
+					float: left;
+					margin-top: 180px;
+					
+					font-size: 42px;
+					color: #fff;
+					line-height: 1.2em;
+				}
+				
+				p {
+					position: relative;
+					float: left;
+					width: 430px;
+					margin-top: 10px;
+					clear: both;
+					
+					font-size: 14px;
+					color: #fff;
+					line-height: 1.7em;
+				}
+				
+				.cta {
+					float: left;
+					margin-top: 35px;
+					clear: both;
+				}		
+
+				.slide-bg {
+					width: 102%;
+				}
+			}
+			
+			&:nth-of-type(3) {
+				
+				h1 {
+					position:relative;
+					float: left;
+					margin-top: 245px;
+					
+					font-size: 42px;
+					color: $blue;
+					line-height: 1.2em;
+				}
+				
+				p {
+					position: relative;
+					float: left;
+					width: 440px;
+					margin-top: 30px;
+					clear: both;
+					
+					font-size: 14px;
+					color: $blue;
+					line-height: 1.7em;
+				}
+				
+				.cta {
+					float: left;
+					margin-top: 35px;
+					clear: both;
+					
+					border: solid 1px $blue;
+					
+					span {
+						color: $blue;
+					}
+				}
+			}
+		}
+	}
+	
+	.slidesjs-pagination {
+		position: absolute;
+		bottom: 40px;
+		left: 10%;
+		
+		li {
+			position: relative;
+			float: left;
+			margin-right: 10px;
+			
+			a {
+				position:relative;
+				float: left;
+				width: 8px;
+				height: 8px;
+				
+				background: url(../images/icon-pag.png) no-repeat;
+			
+				&.active {
+					background: url(../images/icon-pag-active.png) no-repeat;
+					width: 12px;
+					height: 12px;
+					top: -2px;
+				}
+			}
+		}
+	}
+}	// carousel
+
+
+section.title-bar {
+	height: 170px;
+	background: #fff;
+	
+	.logo-main {
+		position: relative;
+		float: left;
+		margin-top: 33px;
+	}
+	
+	h1 {
+		position: relative;
+		display: block;
+		float: left;
+		margin: 55px 0 0 290px;
+		
+		font-size: 48px;
+		color: $blue-light;
+		text-transform: uppercase;
+		text-align: center;
+
+		.sub {
+			color: $yellow;
+		}
+	}
+	
+	.social-icons {
+		position: relative;
+		float: right;
+		margin-top: 78px;
+		
+		li {
+			position: relative;
+			float: left;
+			margin-left: 15px;
+		}
+	}
+}   // title-bar
+
+section.coach {
+	background: url(../images/bg-coach.jpg) no-repeat;
+	height: 685px;
+	
+	@include full-width-background;
+	
+	h1 {
+		position:relative;
+		float: left;
+		margin-top: 180px;
+		
+		font-size: 42px;
+		color: #fff;
+		line-height: 1.2em;
+	}
+	
+	p {
+		position: relative;
+		float: left;
+		width: 430px;
+		margin-top: 10px;
+		clear: both;
+		
+		font-size: 14px;
+		color: #fff;
+		line-height: 1.7em;
+	}
+	
+	.cta {
+		float: left;
+		margin-top: 35px;
+		clear: both;
+	}
+}   // coach
+
+
+section.camps {
+	background: url(../images/bg-camp-carousel.jpg) no-repeat;
+	height: 788px;
+	
+	@include full-width-background;
+	
+	h1 {
+		position:relative;
+		float: left;
+		margin-top: 245px;
+		
+		font-size: 42px;
+		color: $blue;
+		line-height: 1.2em;
+	}
+	
+	p {
+		position: relative;
+		float: left;
+		width: 440px;
+		margin-top: 30px;
+		clear: both;
+		
+		font-size: 14px;
+		color: $blue;
+		line-height: 1.7em;
+	}
+	
+	.cta {
+		float: left;
+		margin-top: 35px;
+		clear: both;
+		
+		border: solid 1px $blue;
+		
+		span {
+			color: $blue;
+		}
+	}
+}   // camps
+
+
+section.sitelinks {
+	background: #0078ce;
+	height: 505px;
+	
+	.links {
+		position: relative;
+		float: left;
+		margin: 170px 0 50px 105px;
+	
+		li {
+			position: relative;
+			float: left;
+			margin-right: 40px;
+		
+			a {
+				font-family: $oswald-light;
+				font-size: 24px;
+				color: $yellow;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+				
+				&:after {
+					content: ".";
+					position: absolute;
+					margin-top: -16px;
+					right: -27px;
+					
+					font-family: "Georgia";
+					font-size: 40px;	
+				}
+			}
+			
+			&:nth-of-type(6) a:after {
+				content: "";
+			}	
+			
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	
+	.cta {
+		display: block;
+		margin: 0 auto;
+		clear: both;
+	}
+}   // sitelinks
+
+
+
+
+
+}   // home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

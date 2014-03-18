@@ -1,0 +1,312 @@
+/* coach ================================ */
+
+#coach {
+
+
+section.coach-header {
+	margin-top: 100px;
+	height: 640px;
+	
+	background: url(../images/bg-amanda.jpg) no-repeat top center;
+	
+	@include full-width-background;
+
+	h1 {
+		position: relative;
+		margin: 175px auto 0;
+		
+		font-size: 42px;
+		color: #fff;
+		line-height: 1.3em;
+		text-align: center;
+	}
+	
+	p {
+		position: relative;
+		margin: 0 auto;
+		
+		font-family: $mission;
+		font-size: 42px;
+		color: $yellow;
+		text-align: center;
+	}
+	
+	.cta {
+		display: block;
+		margin: 40px auto 0;
+		clear: both;
+	}
+}
+
+
+section.accolades {
+	background: url(../images/bg-accolades.jpg) no-repeat top center #18508d;
+	height: 1414px;
+
+	h1 {
+		margin-top: 120px;
+		
+		font-size: 42px;
+		color: $yellow;
+		text-align: center;	
+	}
+	
+	p {
+		margin: 10px auto;
+		width: 650px;
+		
+		font-size: 16px;
+		text-align: center;
+		color: #fff;
+	}
+	
+	ul {
+		position: relative;
+		clear: both;
+		
+		font-family: $open-sans;
+		font-size: 14px;
+		color: #fff;
+		
+		li {
+			margin-bottom: 7px;
+		}
+		
+		&.right {
+			float: right;
+			width: 325px;
+			right: 115px;
+			
+			li:before {
+				content: ".";
+				position: absolute;
+				margin-top: -21px;
+				left: -40px;
+				
+				font-size: 30px;
+				color: $yellow;
+			}
+		}
+		
+		&.left {
+			float: left;
+			left: 157px;
+			width: 290px;
+			
+			text-align: right;
+			
+			li:after {
+				content: ".";
+				position: absolute;
+				margin-top: -21px;
+				right: -40px;
+				
+				font-size: 30px;
+				color: $yellow;
+			}
+		}
+		
+		&.first {
+			margin-top: 104px;
+		}
+		
+		&.second {
+			margin-top: 80px;
+		}
+		
+		&.third {
+			margin-top: 95px;
+		}
+		
+		&.fourth {
+			margin-top: 104px;
+		}
+		
+		&.fifth {
+			margin-top: 23px;
+		}
+	}
+}
+
+
+section.about {
+	padding: 110px 0 140px;
+	background: #fff;
+
+	h1 {
+		margin-bottom: 35px;
+		
+		font-size: 42px;
+		color: $blue;
+	}
+
+	p {
+		position: relative;
+		float: left;
+		width: 600px;
+		
+		font-size: 14px;
+		color: $grey;
+		line-height: 1.7em;
+	}
+	
+	.cta {
+		margin-top: 40px;
+		border-color: $blue;
+		
+		.top,
+		.bottom	{
+			color: $blue;
+		}
+	}
+	
+	img {
+		position: relative;
+		float: left;
+		margin-left: 60px;
+	}
+}
+
+
+section.videos {
+	padding: 110px 0 150px;
+	
+	background: $yellow;
+
+	h1 {
+		margin: 0 auto;
+		
+		font-size: 42px;
+		color: #fff;
+		text-align: center;
+	}
+	
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+	
+	iframe {
+		display: block;
+		margin: 50px auto;
+	}
+	
+	.thumb-wrap {
+		margin-top: 30px;
+		text-align: center;
+		
+		li {
+			display: inline-block;
+			margin-right: 2px;
+			position: relative;
+			
+			&:last-child {
+				margin: 0;
+			}
+			
+			.photo {
+				width: 190px;
+			}
+			
+			.btn-play {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -28px 0 0 -28px;
+			}
+		}
+	}
+}
+
+
+section.twitter-social {
+	padding: 110px 0;
+
+	h1 {
+		font-size: 42px;
+		color: $blue-light;
+		text-align: center;
+	}
+	
+	.subtitle {
+		display: block;
+	
+		font-family: $mission;
+		font-size: 36px;
+		color: $yellow;
+		text-align: center;
+	}
+	
+	.tweets {
+		margin-top: 110px;
+		
+		.avatar {
+			position: relative;
+			float: left;
+		}
+		
+		li {
+			position: relative;
+			float: left;
+			margin-bottom: 75px;
+		}
+		
+		.tweet {
+			position: relative;
+			float: left;
+			width: 890px;
+			margin: -50px 0 0 50px;
+			padding: 35px 50px;
+			
+			background: #f0f0f0;
+			border-radius: 10px;
+			
+			font-family: $open-sans;
+			font-size: 24px;
+			color: $blue-light;
+			
+			a {
+				color: $blue-light;
+			}
+			
+			.author {
+				display: block;
+				position: relative;
+				margin-top: 40px;
+				
+				font-size: 13px;
+				color: $grey;
+			}
+			
+			&:before {
+				content: url(../images/tweet-arrow.png);
+				position: absolute;
+				margin: -15px 0 0 -64px;
+				top: 50%;
+			}
+		}
+	}
+	
+	.cta {
+		display: block;
+		margin: 40px auto;
+		clear: both;
+
+		border-color: $blue;
+		
+		.top,
+		.bottom	{
+			color: $blue;
+		}
+	}
+}
+
+
+.render {
+	position: relative;
+	float: left;
+	width: 100%;
+
+}
+
+} // coach

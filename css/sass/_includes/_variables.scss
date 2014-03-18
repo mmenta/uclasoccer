@@ -1,0 +1,106 @@
+/* variables */
+
+// colors
+
+$blue:         #1e5898;
+$blue-light:   #0078ce;
+$yellow:       #fed530;
+$grey:		   #5A5A5A;
+
+
+// fonts
+
+@font-face {
+    font-family: "oswaldregular";
+    font-style: normal;
+    font-weight: normal;
+    
+    /* IE 9 Compat Modes */
+    src: url("fonts/oswaldregular.eot");
+    src:
+        /* IE 6-8 */
+        url("fonts/oswald-regular.eot?") format("eot"),
+        /* Modern Browsers */
+        url("fonts/oswald-regular.woff") format("woff"),
+        /* Old Safari, Android */
+        url("fonts/oswald-regular.ttf") format("truetype"),
+         /* webkit */
+        url("fonts/oswald-regular.svg") format("svg");
+}
+
+@font-face {
+    font-family: "oswaldlight";
+    font-style: normal;
+    font-weight: normal;
+    
+    /* IE 9 Compat Modes */
+    src: url("fonts/oswald-light.eot");
+    src:
+        /* IE 6-8 */
+        url("fonts/oswald-light.eot?") format("eot"),
+        /* Modern Browsers */
+        url("fonts/oswald-light.woff") format("woff"),
+        /* Old Safari, Android */
+        url("fonts/oswald-light.ttf") format("truetype"),
+         /* webkit */
+        url("fonts/oswald-light.svg") format("svg");
+}
+
+@font-face {
+    font-family: "oswaldbold";
+    font-style: normal;
+    font-weight: normal;
+    
+    /* IE 9 Compat Modes */
+    src: url("fonts/oswald-bold.eot");
+    src:
+        /* IE 6-8 */
+        url("fonts/oswald-bold.eot?") format("eot"),
+        /* Modern Browsers */
+        url("fonts/oswald-bold.woff") format("woff"),
+        /* Old Safari, Android */
+        url("fonts/oswald-bold.ttf") format("truetype"),
+         /* webkit */
+        url("fonts/oswald-bold.svg") format("svg");
+}
+
+@font-face {
+    font-family: "mission_scriptregular";
+    font-style: normal;
+    font-weight: normal;
+    
+    /* IE 9 Compat Modes */
+    src: url("fonts/mission.eot");
+    src:
+        /* IE 6-8 */
+        url("fonts/mission.eot?") format("eot"),
+        /* Modern Browsers */
+        url("fonts/mission.woff") format("woff"),
+        /* Old Safari, Android */
+        url("fonts/mission.ttf") format("truetype"),
+         /* webkit */
+        url("fonts/mission.svg") format("svg");
+}
+
+// font declarations
+
+$oswald-regular:		'oswaldregular', sans-serif;
+$oswald-light:			'oswaldlight', sans-serif;
+$oswald-bold:			'oswaldbold', sans-serif;
+$mission:				'mission_scriptregular', sans-serif;
+$open-sans:				'Open Sans', sans-serif;
+
+
+
+// full width background
+
+@mixin full-width-background {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	//ie fix
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+}

@@ -1,0 +1,26 @@
+// variables
+@import "_includes/variables.scss";
+
+// shared css
+@import "sass/_includes/_normalize.css";
+@import "sass/_includes/_colorbox.css";
+@import "_includes/base.scss";
+
+
+// homepage
+@import "home/home.scss";
+
+// coach
+@import "coach/coach.scss";
+
+// camp
+@import "camps/camps.scss";
+
+// program
+@import "program/program.scss";
+
+// social
+@import "social/social.scss";
+
+// japan
+@import "japan/japan.scss";

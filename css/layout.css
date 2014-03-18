@@ -1,0 +1,1103 @@
+@import url(sass/_includes/_normalize.css);
+@import url(sass/_includes/_colorbox.css);
+/* variables */
+@font-face {
+  font-family: "oswaldregular";
+  font-style: normal;
+  font-weight: normal;
+  /* IE 9 Compat Modes */
+  src: url("fonts/oswaldregular.eot");
+  src: url("fonts/oswald-regular.eot?") format("eot"), url("fonts/oswald-regular.woff") format("woff"), url("fonts/oswald-regular.ttf") format("truetype"), url("fonts/oswald-regular.svg") format("svg"); }
+
+@font-face {
+  font-family: "oswaldlight";
+  font-style: normal;
+  font-weight: normal;
+  /* IE 9 Compat Modes */
+  src: url("fonts/oswald-light.eot");
+  src: url("fonts/oswald-light.eot?") format("eot"), url("fonts/oswald-light.woff") format("woff"), url("fonts/oswald-light.ttf") format("truetype"), url("fonts/oswald-light.svg") format("svg"); }
+
+@font-face {
+  font-family: "oswaldbold";
+  font-style: normal;
+  font-weight: normal;
+  /* IE 9 Compat Modes */
+  src: url("fonts/oswald-bold.eot");
+  src: url("fonts/oswald-bold.eot?") format("eot"), url("fonts/oswald-bold.woff") format("woff"), url("fonts/oswald-bold.ttf") format("truetype"), url("fonts/oswald-bold.svg") format("svg"); }
+
+@font-face {
+  font-family: "mission_scriptregular";
+  font-style: normal;
+  font-weight: normal;
+  /* IE 9 Compat Modes */
+  src: url("fonts/mission.eot");
+  src: url("fonts/mission.eot?") format("eot"), url("fonts/mission.woff") format("woff"), url("fonts/mission.ttf") format("truetype"), url("fonts/mission.svg") format("svg"); }
+
+* {
+  z-index: 1;
+  margin: 0;
+  padding: 0; }
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style-type: none; }
+
+section {
+  position: relative;
+  float: left;
+  width: 100%; }
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 1180px; }
+
+h1,
+h2 {
+  font-family: "oswaldlight", sans-serif;
+  font-weight: 100;
+  letter-spacing: 5px;
+  text-transform: uppercase; }
+
+p {
+  font-family: "Open Sans", sans-serif; }
+
+.bold {
+  font-weight: bold; }
+
+.cta {
+  position: relative;
+  display: inline-block;
+  border: solid 1px #fed530;
+  width: 124px;
+  height: 124px;
+  border-radius: 50%; }
+  .cta span {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.1em; }
+    .cta span.top {
+      margin-top: 43px;
+      font-family: "oswaldbold", sans-serif;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .cta span.bottom {
+      font-family: "mission_scriptregular", sans-serif;
+      font-size: 26px; }
+	  
+.cta.hoverstate {
+	background-color: #fff; }
+.cta span.hoverstate {
+	color: #4A74A7; }
+
+nav.main {
+  position: fixed;
+  right: 50px;
+  top: 25px;
+  z-index: 10; }
+  nav.main .btn-menu {
+    position: relative;
+    float: right; }
+  nav.main ul {
+    position: absolute;
+    top: 37px;
+    right: 0;
+    padding: 10px 0;
+    display: none;
+    background: #fed530; }
+    nav.main ul li a {
+      position: relative;
+      float: right;
+      width: 190px;
+      padding: 10px 0 10px 20px;
+      background: #fed530;
+      font-family: "oswaldregular", sans-serif;
+      font-size: 16px;
+      color: #fff;
+      text-transform: uppercase; }
+      nav.main ul li a:hover {
+        background: #fff;
+        color: #4a74a7; }
+
+nav.subnav {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 20px 0;
+  background: #fff;
+  z-index: 9; }
+  nav.subnav ul {
+    text-align: center; }
+    nav.subnav ul li {
+      display: inline;
+      margin-right: 35px; }
+      nav.subnav ul li:last-child {
+        margin-right: 0; }
+      nav.subnav ul li a {
+        font-family: "oswaldregular", sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #bebebe;
+        letter-spacing: 2px; }
+      nav.subnav ul li.active a {
+        color: #1e5898; }
+
+header.title-bar {
+  position: fixed;
+  float: left;
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  z-index: 9; }
+  header.title-bar .logo-main {
+    position: absolute;
+    width: 94px;
+    top: 12px;
+    left: 0;
+    z-index: 2; }
+  header.title-bar h1 {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding-top: 27px;
+    font-size: 26px;
+    color: #0078ce;
+    text-transform: uppercase;
+    text-align: center; }
+    header.title-bar h1 .sub {
+      color: #fed530; }
+    header.title-bar h1 .page {
+      font-family: "mission_scriptregular", sans-serif;
+      font-size: 32px;
+      color: #1e5898;
+      text-transform: capitalize;
+      letter-spacing: 0; }
+  header.title-bar .social-icons {
+    position: absolute;
+    right: 75px;
+    top: 35px; }
+    header.title-bar .social-icons li {
+      position: relative;
+      float: left;
+      margin-left: 15px; }
+
+section.social {
+  background: #fff; }
+  #home section.social {
+    padding-bottom: 150px; }
+  section.social .loading {
+    position: absolute;
+    right: 200px;
+    top: 55px;
+    display: none; }
+  section.social .loading-more {
+    position: absolute;
+    bottom: 30px;
+    right: 440px;
+    display: none; }
+  section.social h1 {
+    margin: 95px auto 0;
+    text-align: center;
+    font-size: 36px;
+    color: #0078ce; }
+  section.social .sub-text {
+    margin: 0 auto;
+    font-family: "mission_scriptregular", sans-serif;
+    font-size: 36px;
+    color: #fed530;
+    text-align: center;
+    letter-spacing: 1px; }
+  section.social .social-filter {
+    position: absolute;
+    right: 0px;
+    top: 50px; }
+    section.social .social-filter li {
+      position: relative;
+      float: left;
+      margin-left: 10px; }
+  section.social .box-wrap {
+    position: relative;
+    float: left;
+    margin-top: 60px; }
+    section.social .box-wrap li {
+      position: relative;
+      float: left;
+      width: 280px;
+      height: 280px;
+      margin: 0 20px 70px 0;
+      cursor: pointer; }
+      section.social .box-wrap li:nth-of-type(4n) {
+        margin-right: 0; }
+      section.social .box-wrap li .box-text {
+        position: relative;
+        width: 240px;
+        font-family: "oswaldlight", sans-serif;
+        color: #fff;
+        line-height: 1.4em; }
+      section.social .box-wrap li .icon {
+        position: absolute;
+        left: 0px;
+        bottom: -32px; }
+      section.social .box-wrap li .handle {
+        position: absolute;
+        left: 30px;
+        bottom: -30px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 13px;
+        font-weight: normal;
+        color: #5a5a5a; }
+      section.social .box-wrap li.twitter {
+        background: #1ca8e9; }
+        section.social .box-wrap li.twitter .box-text {
+          display: table-cell;
+          vertical-align: middle;
+          height: 280px;
+          padding-left: 20px;
+          font-size: 21px; }
+      section.social .box-wrap li.facebook {
+        background: #1e5898; }
+        section.social .box-wrap li.facebook .image-wrap {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 280px;
+          height: 280px;
+          overflow: hidden; }
+        section.social .box-wrap li.facebook .bg-social {
+          width: 280px; }
+        section.social .box-wrap li.facebook .overlay {
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          padding: 20px 0;
+          background-color: rgba(30, 88, 152, 0.8); }
+          section.social .box-wrap li.facebook .overlay p {
+            width: 260px;
+            margin-left: 10px;
+            font-family: "oswaldlight", sans-serif;
+            font-size: 18px;
+            color: #fff; }
+      section.social .box-wrap li.instagram .bg-social {
+        width: 280px;
+        height: 280px; }
+  section.social .cta {
+    display: block;
+    clear: both;
+    margin: 0 auto;
+    top: 10px;
+    border: solid 1px #1e5898; }
+    section.social .cta span {
+      color: #1e5898; }
+
+.social-modal .text-section {
+  position: relative;
+  float: left;
+  width: 600px;
+  height: 600px;
+  background-color: #1ca8e9;
+  text-align: center;
+  overflow: hidden; }
+  .social-modal .text-section h2 {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    margin-top: -180px;
+    width: 500px;
+    font-family: "oswaldlight", sans-serif;
+    font-size: 40px;
+    text-align: left;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    color: #fff;
+    text-transform: none; }
+.social-modal .info-section {
+  position: relative;
+  float: left;
+  padding: 25px 25px 0 25px;
+  width: 360px;
+  overflow: hidden;
+  background: #fff; }
+  .social-modal .info-section .avatar {
+    display: inline-block;
+    vertical-align: top; }
+  .social-modal .info-section hgroup {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px; }
+    .social-modal .info-section hgroup .name,
+    .social-modal .info-section hgroup .handle {
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      color: #1e5898; }
+    .social-modal .info-section hgroup .date {
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      color: #0078ce; }
+  .social-modal .info-section .image-wrapper {
+    margin: 40px 0;
+    width: 360px;
+    max-height: 300px;
+    overflow: hidden; }
+    .social-modal .info-section .image-wrapper img {
+      width: 100%; }
+  .social-modal .info-section h6 {
+    margin-top: 40px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    color: #5a5a5a; }
+  .social-modal .info-section .social-icons {
+    margin-top: 10px; }
+    .social-modal .info-section .social-icons li {
+      position: relative;
+      float: left;
+      margin-right: 1px; }
+
+.modal-wrapper {
+  max-width: 800px; }
+  .modal-wrapper img {
+    max-width: 800px; }
+
+.render {
+  background: #fff;
+  min-height: 500px; }
+
+.vector-arrow {
+  display: block;
+  margin: 55px auto; }
+
+footer {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 50px;
+  background: #0078ce; }
+  footer .social-icons {
+    position: absolute;
+    left: 0px;
+    top: 3px; }
+    footer .social-icons li {
+      position: relative;
+      float: left;
+      margin-right: 15px; }
+  footer .copyright {
+    display: block;
+    margin-top: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-align: center; }
+    footer .copyright a {
+      margin-left: 25px;
+      color: #fff; }
+      footer .copyright a:before {
+        content: ".";
+        position: absolute;
+        margin-left: -14px;
+        margin-top: -2px;
+        font-family: "Georgia"; }
+  footer .btn-scroll-up {
+    position: absolute;
+    right: 0px;
+    top: 1px; }
+
+/* homepage ============================= */
+#home section.carousel {
+  overflow: hidden; }
+  #home section.carousel #slides {
+    display: none;
+    min-width: 1340px; }
+    #home section.carousel #slides li .slide-bg {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1; }
+    #home section.carousel #slides li h1 {
+      position: relative;
+      margin: 250px auto 0;
+      font-size: 60px;
+      color: #fff;
+      text-align: center; }
+    #home section.carousel #slides li .cta {
+      display: block;
+      margin: 50px auto 0;
+      clear: both; }
+    #home section.carousel #slides li:nth-of-type(2) h1 {
+      position: relative;
+      float: left;
+      margin-top: 180px;
+      font-size: 42px;
+      color: #fff;
+      line-height: 1.2em; }
+    #home section.carousel #slides li:nth-of-type(2) p {
+      position: relative;
+      float: left;
+      width: 430px;
+      margin-top: 10px;
+      clear: both;
+      font-size: 14px;
+      color: #fff;
+      line-height: 1.7em; }
+    #home section.carousel #slides li:nth-of-type(2) .cta {
+      float: left;
+      margin-top: 35px;
+      clear: both; }
+    #home section.carousel #slides li:nth-of-type(2) .slide-bg {
+      width: 102%; }
+    #home section.carousel #slides li:nth-of-type(3) h1 {
+      position: relative;
+      float: left;
+      margin-top: 245px;
+      font-size: 42px;
+      color: #1e5898;
+      line-height: 1.2em; }
+    #home section.carousel #slides li:nth-of-type(3) p {
+      position: relative;
+      float: left;
+      width: 440px;
+      margin-top: 30px;
+      clear: both;
+      font-size: 14px;
+      color: #1e5898;
+      line-height: 1.7em; }
+    #home section.carousel #slides li:nth-of-type(3) .cta {
+      float: left;
+      margin-top: 35px;
+      clear: both;
+      border: solid 1px #1e5898; }
+      #home section.carousel #slides li:nth-of-type(3) .cta span {
+        color: #1e5898; }
+  #home section.carousel .slidesjs-pagination {
+    position: absolute;
+    bottom: 40px;
+    left: 10%; }
+    #home section.carousel .slidesjs-pagination li {
+      position: relative;
+      float: left;
+      margin-right: 10px; }
+      #home section.carousel .slidesjs-pagination li a {
+        position: relative;
+        float: left;
+        width: 8px;
+        height: 8px;
+        background: url(../images/icon-pag.png) no-repeat; }
+        #home section.carousel .slidesjs-pagination li a.active {
+          background: url(../images/icon-pag-active.png) no-repeat;
+          width: 12px;
+          height: 12px;
+          top: -2px; }
+#home section.title-bar {
+  height: 170px;
+  background: #fff; }
+  #home section.title-bar .logo-main {
+    position: relative;
+    float: left;
+    margin-top: 33px; }
+  #home section.title-bar h1 {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 55px 0 0 290px;
+    font-size: 48px;
+    color: #0078ce;
+    text-transform: uppercase;
+    text-align: center; }
+    #home section.title-bar h1 .sub {
+      color: #fed530; }
+  #home section.title-bar .social-icons {
+    position: relative;
+    float: right;
+    margin-top: 78px; }
+    #home section.title-bar .social-icons li {
+      position: relative;
+      float: left;
+      margin-left: 15px; }
+#home section.coach {
+  background: url(../images/bg-coach.jpg) no-repeat;
+  height: 685px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')"; }
+  #home section.coach h1 {
+    position: relative;
+    float: left;
+    margin-top: 180px;
+    font-size: 42px;
+    color: #fff;
+    line-height: 1.2em; }
+  #home section.coach p {
+    position: relative;
+    float: left;
+    width: 430px;
+    margin-top: 10px;
+    clear: both;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.7em; }
+  #home section.coach .cta {
+    float: left;
+    margin-top: 35px;
+    clear: both; }
+#home section.camps {
+  background: url(../images/bg-camp-carousel.jpg) no-repeat;
+  height: 788px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')"; }
+  #home section.camps h1 {
+    position: relative;
+    float: left;
+    margin-top: 245px;
+    font-size: 42px;
+    color: #1e5898;
+    line-height: 1.2em; }
+  #home section.camps p {
+    position: relative;
+    float: left;
+    width: 440px;
+    margin-top: 30px;
+    clear: both;
+    font-size: 14px;
+    color: #1e5898;
+    line-height: 1.7em; }
+  #home section.camps .cta {
+    float: left;
+    margin-top: 35px;
+    clear: both;
+    border: solid 1px #1e5898; }
+    #home section.camps .cta span {
+      color: #1e5898; }
+#home section.sitelinks {
+  background: #0078ce;
+  height: 505px; }
+  #home section.sitelinks .links {
+    position: relative;
+    float: left;
+    margin: 170px 0 50px 105px; }
+    #home section.sitelinks .links li {
+      position: relative;
+      float: left;
+      margin-right: 40px; }
+      #home section.sitelinks .links li a {
+        font-family: "oswaldlight", sans-serif;
+        font-size: 24px;
+        color: #fed530;
+        text-transform: uppercase;
+        letter-spacing: 3px; }
+      #home section.sitelinks .links li a:hover {
+        color: #fff; }		
+        #home section.sitelinks .links li a:after {
+          content: ".";
+          position: absolute;
+          margin-top: -16px;
+          right: -27px;
+          font-family: "Georgia";
+          font-size: 40px; }
+      #home section.sitelinks .links li:nth-of-type(5) a:after {
+        content: ""; }
+      #home section.sitelinks .links li:last-child {
+        margin-right: 0; }
+  #home section.sitelinks .cta {
+    display: block;
+    margin: 0 auto;
+    clear: both; }
+
+/* coach ================================ */
+#coach section.coach-header {
+  margin-top: 100px;
+  height: 640px;
+  background: url(../images/bg-amanda.jpg) no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')"; }
+  #coach section.coach-header h1 {
+    position: relative;
+    margin: 175px auto 0;
+    font-size: 42px;
+    color: #fff;
+    line-height: 1.3em;
+    text-align: center; }
+  #coach section.coach-header p {
+    position: relative;
+    margin: 0 auto;
+    font-family: "mission_scriptregular", sans-serif;
+    font-size: 42px;
+    color: #fed530;
+    text-align: center; }
+  #coach section.coach-header .cta {
+    display: block;
+    margin: 40px auto 0;
+    clear: both; }
+#coach section.accolades {
+  background: url(../images/bg-accolades.jpg) no-repeat top center #18508d;
+  height: 1414px; }
+  #coach section.accolades h1 {
+    margin-top: 120px;
+    font-size: 42px;
+    color: #fed530;
+    text-align: center; }
+  #coach section.accolades p {
+    margin: 10px auto;
+    width: 650px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff; }
+  #coach section.accolades ul {
+    position: relative;
+    clear: both;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #fff; }
+    #coach section.accolades ul li {
+      margin-bottom: 7px; }
+    #coach section.accolades ul.right {
+      float: right;
+      width: 325px;
+      right: 115px; }
+      #coach section.accolades ul.right li:before {
+        content: ".";
+        position: absolute;
+        margin-top: -21px;
+        left: -40px;
+        font-size: 30px;
+        color: #fed530; }
+    #coach section.accolades ul.left {
+      float: left;
+      left: 157px;
+      width: 290px;
+      text-align: right; }
+      #coach section.accolades ul.left li:after {
+        content: ".";
+        position: absolute;
+        margin-top: -21px;
+        right: -40px;
+        font-size: 30px;
+        color: #fed530; }
+    #coach section.accolades ul.first {
+      margin-top: 104px; }
+    #coach section.accolades ul.second {
+      margin-top: 80px; }
+    #coach section.accolades ul.third {
+      margin-top: 13px; }
+    #coach section.accolades ul.fourth {
+      margin-top: 98px; }
+    #coach section.accolades ul.fifth {
+      margin-top: -36px; }
+#coach section.about {
+  padding: 110px 0 140px;
+  background: #fff; }
+  #coach section.about h1 {
+    margin-bottom: 35px;
+    font-size: 42px;
+    color: #1e5898; }
+  #coach section.about p {
+    position: relative;
+    float: left;
+    width: 600px;
+    font-size: 14px;
+    color: #5a5a5a;
+    line-height: 1.7em; }
+  #coach section.about .cta {
+    margin-top: 40px;
+    border-color: #1e5898; }
+    #coach section.about .cta .top,
+    #coach section.about .cta .bottom {
+      color: #1e5898; }
+  #coach section.about img {
+    position: relative;
+    float: left;
+    margin-left: 60px; }
+#coach section.videos {
+  padding: 110px 0 150px;
+  background: #fed530; }
+  #coach section.videos h1 {
+    margin: 0 auto;
+    font-size: 42px;
+    color: #fff;
+    text-align: center; }
+  #coach section.videos img {
+    display: block;
+    margin: 0 auto; }
+  #coach section.videos iframe {
+    display: block;
+    margin: 50px auto; }
+  #coach section.videos .thumb-wrap {
+    margin-top: 30px;
+    text-align: center; }
+    #coach section.videos .thumb-wrap li {
+      display: inline-block;
+      margin-right: 2px;
+      position: relative; }
+      #coach section.videos .thumb-wrap li:last-child {
+        margin: 0; }
+      #coach section.videos .thumb-wrap li .photo {
+        width: 190px; }
+      #coach section.videos .thumb-wrap li .btn-play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -28px 0 0 -28px; }
+#coach section.twitter-social {
+  padding: 110px 0; }
+  #coach section.twitter-social h1 {
+    font-size: 42px;
+    color: #0078ce;
+    text-align: center; }
+  #coach section.twitter-social .subtitle {
+    display: block;
+    font-family: "mission_scriptregular", sans-serif;
+    font-size: 36px;
+    color: #fed530;
+    text-align: center; }
+  #coach section.twitter-social .tweets {
+    margin-top: 110px; }
+    #coach section.twitter-social .tweets .avatar {
+      position: relative;
+      float: left; }
+    #coach section.twitter-social .tweets li {
+      position: relative;
+      float: left;
+      margin-bottom: 75px; }
+    #coach section.twitter-social .tweets .tweet {
+      position: relative;
+      float: left;
+      width: 890px;
+      margin: -50px 0 0 50px;
+      padding: 35px 50px;
+      background: #f0f0f0;
+      border-radius: 10px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 24px;
+      color: #0078ce; }
+      #coach section.twitter-social .tweets .tweet a {
+        color: #0078ce; }
+      #coach section.twitter-social .tweets .tweet .author {
+        display: block;
+        position: relative;
+        margin-top: 40px;
+        font-size: 13px;
+        color: #5a5a5a; }
+      #coach section.twitter-social .tweets .tweet:before {
+        content: url(../images/tweet-arrow.png);
+        position: absolute;
+        margin: -15px 0 0 -64px;
+        top: 50%; }
+  #coach section.twitter-social .cta {
+    display: block;
+    margin: 40px auto;
+    clear: both;
+    border-color: #1e5898; }
+    #coach section.twitter-social .cta .top,
+    #coach section.twitter-social .cta .bottom {
+      color: #1e5898; }
+#coach .render {
+  position: relative;
+  float: left;
+  width: 100%; }
+
+/* camp ================================ */
+#camps section.camp-header {
+  margin-top: 100px;
+  height: 695px;
+  background: #007dc3; }
+  #camps section.camp-header h1 {
+    display: block;
+    margin-top: 40px;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0; }
+  #camps section.camp-header h3 {
+    display: block;
+    margin-top: 75px;
+    font-family: "oswaldlight", sans-serif;
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5em; }
+    #camps section.camp-header h3 .sub {
+      font-family: "mission_scriptregular", sans-serif;
+      font-size: 55px;
+      color: #fed530;
+      text-transform: none; }
+  #camps section.camp-header p {
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff; }
+  #camps section.camp-header .cta {
+    display: block;
+    margin: 50px auto; }
+  #camps section.camp-header .img-soccerball {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    margin-left: -140px; }
+#camps section.academy .heading {
+  height: 441px; }
+  #camps section.academy .heading.bg-academy {
+    background: url(../images/bg-academy.jpg) no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')"; }
+  #camps section.academy .heading.bg-camps {
+    background: url(../images/bg-camps.jpg) no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')"; }
+  #camps section.academy .heading.bg-coaching {
+    background: #1e5898; }
+  #camps section.academy .heading.bg-florida {
+    background: #FDC323; }	
+  #camps section.academy .heading h1 {
+    position: relative;
+    display: block;
+    top: 175px;
+    font-size: 42px;
+    color: #fff;
+    text-align: center; }
+    #camps section.academy .heading h1 .sub {
+      font-family: "mission_scriptregular", sans-serif;
+      font-size: 48px;
+      text-transform: none; }
+#camps section.academy .section-content {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 60px 0 80px;
+  background: #fff; }
+  #camps section.academy .section-content aside {
+    position: relative;
+    float: left;
+    width: 380px;
+    margin-right: 60px; 
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	color: #5a5a5a; }
+    #camps section.academy .section-content aside .logo-aca {
+      margin-bottom: 50px;
+      width: 380px; }
+    #camps section.academy .section-content aside h3 {
+      font-family: "oswaldregular", sans-serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #1e5898;
+      letter-spacing: 2px; 
+	  font-weight: 300 }
+    #camps section.academy .section-content aside ul {
+      margin: 25px 0; }
+      #camps section.academy .section-content aside ul li {
+        margin-bottom: 3px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        color: #5a5a5a; }
+    #camps section.academy .section-content aside .cta {
+      border-radius: 5px;
+      width: 348px;
+      height: auto;
+      padding: 15px 0;
+      margin-top: 50px;
+      font-family: "oswaldregular", sans-serif;
+      font-size: 18px;
+      color: #fed530;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    #camps section.academy .section-content aside .image-boxes {
+      position: relative;
+      float: left;
+      margin-bottom: 40px; }
+      #camps section.academy .section-content aside .image-boxes li {
+        position: relative;
+        float: left;
+        margin: 0 10px 10px 0; }
+    #camps section.academy .section-content aside h6 {
+      margin-top: 40px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 12px;
+      color: #5a5a5a; }
+    #camps section.academy .section-content aside .social-icons {
+      margin-top: 10px; }
+      #camps section.academy .section-content aside .social-icons li {
+        position: relative;
+        float: left;
+        margin-right: 1px; }
+  #camps section.academy .section-content .content-info {
+    position: relative;
+    float: left;
+    width: 740px; }
+  #camps section.academy .section-content .content-info ul {
+    color: #5A5A5A;
+	font-size: 14px;
+	line-height: 1.7em; }	
+  #camps section.academy .section-content .content-info ul li {
+    margin-bottom: 25px; }		
+    #camps section.academy .section-content .content-info .tmb-video {
+      position: relative;
+      float: left;
+      margin-bottom: 50px; }
+    #camps section.academy .section-content .content-info h2 {
+      margin-bottom: 10px;
+      font-size: 36px;
+      color: #1e5898; }
+    #camps section.academy .section-content .content-info p {
+      margin-bottom: 75px;
+      font-size: 14px;
+      color: #5a5a5a;
+      line-height: 1.7em; }
+    #camps section.academy .section-content .content-info .cta span {
+      color: #1e5898; }
+
+/* program ================================ */
+#program section.program-header {
+  margin-top: 100px;
+  height: 697px;
+  background: url(../images/bg-program.jpg) no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')"; }
+  #program section.program-header h1 {
+    position: relative;
+    margin: 280px auto 0;
+    font-size: 60px;
+    color: #fff;
+    text-align: center; }
+  #program section.program-header .cta {
+    display: block;
+    margin: 50px auto 0;
+    clear: both; }
+#program section.culture {
+  background: url(../images/bg-culture.jpg) no-repeat top center;
+  height: 682px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')"; }
+  #program section.culture h1 {
+    margin-top: 120px;
+    font-size: 42px;
+    color: #fff; }
+    #program section.culture h1 .sub {
+      font-family: "mission_scriptregular", sans-serif;
+      font-size: 55px;
+      text-transform: none; }
+  #program section.culture p {
+    margin-top: 20px;
+    width: 460px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.7em; }
+#program section.info-boxes {
+  padding-top: 80px; }
+  #program section.info-boxes li {
+    position: relative;
+    float: left;
+    width: 393px;
+    height: 300px; }
+    #program section.info-boxes li h2 {
+      margin-top: 60px;
+      font-size: 36px;
+      color: #fff;
+      text-align: center; }
+    #program section.info-boxes li .cta {
+      display: block;
+      margin: 20px auto; }
+      .schedule #program section.info-boxes li .cta {
+        border-color: #1e5898; }
+      .news #program section.info-boxes li .cta {
+        border-color: #fff; }
+        .news #program section.info-boxes li .cta span {
+          color: #1e5898; }
+    #program section.info-boxes li.roster {
+      background-color: #1e5898; }
+    #program section.info-boxes li.schedule {
+      background-color: #0078ce; }
+    #program section.info-boxes li.news {
+      background-color: #fdc222; }
+#program section.media {
+  padding: 80px 0 130px; }
+  #program section.media h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #1e5898; }
+  #program section.media ul {
+    position: relative;
+    float: left;
+    margin: 50px 0; }
+    #program section.media ul li {
+      position: relative;
+      float: left;
+      width: 280px;
+      height: 280px;
+      margin: 0 20px 20px 0;
+      overflow: hidden;
+      cursor: pointer; }
+      #program section.media ul li img.photo {
+        width: 280px;
+        height: 280px; }
+      #program section.media ul li:nth-of-type(4n) {
+        margin-right: 0; }
+      #program section.media ul li .btn-play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -32px 0 0 -32px; }
+  #program section.media .cta {
+    display: block;
+    margin: 0px auto;
+    clear: both;
+    border-color: #1e5898; }
+    #program section.media .cta span {
+      color: #1e5898; }
+
+/* social ================================ */
+#social .social {
+  padding: 85px 0;
+  background: #f2f2f2; }
+  #social .social .social-filter {
+    top: 5px; }
+  #social .social .loading {
+    top: 13px; }
+
+/* japan ================================ */
+#japan section.map img {
+  width: 100%;
+  position: relative; }

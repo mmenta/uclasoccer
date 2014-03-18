@@ -1,0 +1,167 @@
+/* program ================================ */
+
+#program {
+
+section.program-header {
+	margin-top: 100px;
+	height: 697px;
+	
+	background: url(../images/bg-program.jpg) no-repeat top center;
+	
+	@include full-width-background;
+
+	h1 {
+		position: relative;
+		margin: 280px auto 0;
+		
+		font-size: 60px;
+		color: #fff;
+		text-align: center;
+	}
+	
+	.cta {
+		display: block;
+		margin: 50px auto 0;
+		clear: both;
+	}
+}
+
+
+section.culture {
+	background: url(../images/bg-culture.jpg) no-repeat top center;
+	height: 682px;
+	
+	@include full-width-background;
+	
+	h1 {
+		margin-top: 120px;
+		font-size: 42px;
+		color: #fff;
+		
+		.sub {
+			font-family: $mission;
+			font-size: 55px;
+			text-transform: none;
+		}
+	}
+	
+	p {
+		margin-top: 20px;
+		width: 460px;
+		
+		font-size: 14px;
+		color: #fff;
+		line-height: 1.7em;
+	}
+}
+
+
+section.info-boxes {
+	padding-top: 80px;
+	
+	li {
+		position: relative;
+		float: left;
+		
+		width: 393px;
+		height: 300px;
+		
+		h2 {
+			margin-top: 60px;
+			
+			font-size: 36px;
+			color: #fff;
+			text-align: center;
+		}
+		
+		.cta {
+			display: block;
+			margin: 20px auto;
+			
+			.schedule & {
+				border-color: $blue;
+			}
+			
+			.news & {
+				border-color: #fff;
+				
+				span {
+					color: $blue;
+				}
+			}
+		}
+		
+		&.roster {
+			background-color: #1e5898;
+		}
+		
+		&.schedule {
+			background-color: #0078ce;
+		}
+		
+		&.news {
+			background-color: #fdc222;
+		}
+	}	
+}
+
+
+section.media {
+	padding: 80px 0 130px;
+	
+	h1 {
+		font-size: 36px;
+		text-align: center;
+		color: $blue;
+	}
+	
+	ul {
+		position: relative;
+		float: left;
+		margin: 50px 0;
+		
+		li {
+			position: relative;
+			float: left;
+			width: 280px;
+			height: 280px;
+			margin: 0 20px 20px 0;
+			
+			overflow: hidden;
+			cursor: pointer;
+			
+			img.photo {
+				width: 280px;
+				height: 280px;
+			}
+			
+			&:nth-of-type(4n) {
+				margin-right: 0;
+			}
+			
+			.btn-play {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -32px 0 0 -32px;
+			}
+		}
+	}
+	
+	.cta {
+		display: block;
+		margin: 0px auto;
+		clear: both;
+		
+		border-color: $blue;
+		
+		span {
+			color: $blue;
+		}
+	}
+}
+
+
+
+} // program
+

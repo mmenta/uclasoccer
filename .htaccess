@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/(css|images|scripts|models|views)/
+RewriteRule . - [S=3] #skip the next 3 rules if the RewriteCond match
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]

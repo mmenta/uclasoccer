@@ -1,0 +1,581 @@
+
+// resets =========================
+
+* {
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+
+// structure ======================
+
+section {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	width: 1180px;
+}
+
+h1,
+h2 {
+	font-family: $oswald-light;
+	font-weight: 100;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+p {
+    font-family: $open-sans;   
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.cta {
+	position: relative;
+	display: inline-block;
+	
+	border: solid 1px $yellow;
+	width: 124px;
+	height: 124px;
+	border-radius: 50%;
+	
+	span {
+		display: block;
+		text-align: center;
+		
+		font-size: 15px;
+		color: #fff;
+		line-height: 1.1em;
+		
+		&.top {
+			margin-top: 43px;
+			
+			font-family: $oswald-bold;
+			font-size: 15px;
+			text-transform: uppercase;	
+			letter-spacing: 2px;
+		}
+		
+		&.bottom {
+			font-family: $mission;
+			font-size: 26px;	
+		}
+	}
+}
+
+
+// nav
+
+nav.main {
+	position: fixed;
+	right: 50px;
+	top: 25px;
+	
+	z-index: 10;
+	
+	.btn-menu {
+		position: relative;
+		float: right;	
+	}
+	
+	ul {
+		position: absolute;
+		top: 37px;
+		right: 0;
+		padding: 10px 0;
+		
+		display: none;
+		background: #fed530;
+		
+		li {
+			
+			a {
+				position: relative;
+				float: right;
+				width: 190px;
+				padding: 10px 0 10px 20px;
+			
+				background: #fed530;
+				
+				font-family: $oswald-regular;
+				font-size: 16px;
+				color: #fff;
+				text-transform: uppercase;
+				
+				&:hover {
+					background: #fff;
+					color: #4a74a7;
+				}
+			}
+		}
+	}
+}
+
+nav.subnav {
+	position: relative;
+	float: left;
+	width: 100%;
+	padding: 20px 0;
+	
+	background: #fff;
+	z-index: 9;
+	
+	ul {
+		text-align: center;
+	
+		li {
+			display: inline;
+			margin-right: 35px;
+		
+			&:last-child {
+				margin-right: 0;
+			}
+		
+			a {
+				font-family: $oswald-regular;
+				font-size: 12px;
+				text-transform: uppercase;
+				color: #bebebe;
+				letter-spacing: 2px;
+			}
+			
+			&.active a {
+				color: $blue;
+			}
+		}	
+	}
+}
+
+// subpage nav
+
+header.title-bar {
+	position: fixed;
+	float: left;
+	width: 100%;
+	height: 100px;
+	
+	background: #fff;
+	z-index: 9;
+	
+	.logo-main {
+		position: absolute;
+		width: 94px;
+		top: 12px;
+		left: 0;
+
+		z-index: 2;
+	}
+	
+	h1 {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		padding-top: 27px;
+		
+		font-size: 26px;
+		color: $blue-light;
+		text-transform: uppercase;
+		text-align: center;
+		
+		.sub {
+			color: $yellow;
+		}
+
+		.page {
+			font-family: $mission;
+			font-size: 32px;
+			color: $blue;
+			text-transform: capitalize;
+			letter-spacing: 0;
+		}
+	}
+	
+	.social-icons {
+		position: absolute;
+		right: 75px;
+		top: 35px;
+		
+		li {
+			position: relative;
+			float: left;
+			margin-left: 15px;
+		}
+	}
+}
+
+// social
+
+section.social {
+	background: #fff;
+	
+	#home & {
+		padding-bottom: 150px;
+	}
+	
+	.loading {
+		position: absolute;
+		right: 200px;
+		top: 55px;
+		display: none;
+	}
+	
+	.loading-more {
+		position: absolute;
+		bottom: 30px;
+		right: 440px;
+		display: none;
+	}
+	
+	h1 {
+		margin: 95px auto 0;
+		text-align: center;
+		
+		font-size: 36px;
+		color: $blue-light;
+	}
+	
+	.sub-text {
+		margin: 0 auto;
+		
+		font-family: $mission;
+		font-size: 36px;
+		color: $yellow;
+		text-align: center;
+		letter-spacing: 1px;
+	}
+	
+	.social-filter {
+		position: absolute;
+		right: 0px;
+		top: 50px;
+		
+		li {
+			position: relative;
+			float: left;
+			margin-left: 10px;
+		}
+	}
+	
+	.box-wrap {
+		position: relative;
+		float: left;
+		margin-top: 60px;
+		
+		li {
+			position: relative;
+			float: left;
+			width: 280px;
+			height: 280px;
+			margin: 0 20px 70px 0;
+			
+			cursor: pointer;
+			
+			&:nth-of-type(4n) {
+				margin-right: 0;
+			}
+			
+			.box-text {
+				position: relative;
+				width: 240px;
+				
+				font-family: $oswald-light;
+				color: #fff;
+				line-height: 1.4em;
+			}
+			
+			.icon {
+				position: absolute;
+				left: 0px;
+				bottom: -32px;
+			}
+			
+			.handle {
+				position: absolute;
+				left: 30px;
+				bottom: -30px;
+				
+				font-family: $open-sans;
+				font-size: 13px;
+				font-weight: normal;
+				color: #5a5a5a;
+			}
+			
+			&.twitter {
+				background: #1ca8e9;
+				
+				.box-text {
+					display: table-cell;
+					vertical-align: middle;
+					height: 280px;
+					padding-left: 20px;
+					
+					font-size: 21px;
+				}
+			}
+			
+			&.facebook {
+				background: #1e5898;
+				
+				.image-wrap {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 280px;
+					height: 280px;
+					
+					overflow: hidden;
+				}
+				
+				.bg-social {
+					width: 280px;
+				}
+				
+				.overlay {
+					position: absolute;
+					width: 100%;
+					bottom: 0;
+					left: 0;
+					padding: 20px 0;
+					background-color: rgba(30, 88, 152, 0.8);
+
+					p {
+						width: 260px;
+						margin-left: 10px;
+						
+						font-family: $oswald-light;
+						font-size: 18px;
+						color: #fff;
+					}
+				}
+				
+			}
+			
+			&.instagram {
+				.bg-social {
+					width: 280px;
+					height: 280px;
+				}
+			}
+		}
+	}
+	
+	.cta {
+		display: block;
+		clear: both;
+		margin: 0 auto;
+		top: 10px;
+		
+		border: solid 1px $blue;
+		
+		span {
+			color: $blue;
+		}
+	}
+}   // social
+
+// social modal
+
+.social-modal {
+
+	.text-section {
+		position: relative;
+		float: left;
+		width: 600px;
+		height: 600px;
+		
+		background-color: #1ca8e9;
+		text-align: center;
+		overflow: hidden;
+		
+		h2 {
+			position: absolute;
+			top: 50%;
+			left: 50px;
+			margin-top: -180px;
+			width: 500px;
+			
+			font-family: $oswald-light;
+			font-size: 40px;
+			text-align: left;
+			line-height: 1.2em;
+			word-wrap: break-word;
+			color: #fff;
+			text-transform: none;
+		}
+	
+	
+	}
+	
+	.info-section {
+		position: relative;
+		float: left;
+		padding: 25px 25px 0 25px;
+		width: 360px;
+		overflow: hidden;
+		
+		background: #fff;
+		
+		.avatar {
+			display: inline-block;
+			vertical-align: top;
+		}
+		
+		hgroup {
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 10px;
+			
+			.name,
+			.handle {
+				font-family: $open-sans;
+				font-size: 14px;
+				font-weight: bold;
+				color: $blue;
+			}
+			
+			.date {
+				font-family: $open-sans;
+				font-size: 14px;
+				color: $blue-light;
+			}
+		
+		}
+		
+		.image-wrapper {
+			margin: 40px 0;
+			width: 360px;
+			max-height: 300px;
+			overflow: hidden;
+			
+			img {
+				width: 100%;
+			}
+		}
+		
+		h6 {
+			margin-top: 40px;
+			font-family: $open-sans;
+			font-size: 12px;
+			color: $grey;
+		}
+		
+		.social-icons {
+			margin-top: 10px;
+			
+			li {
+				position: relative;
+				float: left;
+				margin-right: 1px;
+			}
+		}
+	}
+	
+} 	// social-modal
+
+
+.modal-wrapper {
+	max-width: 800px;
+	
+	img {
+		max-width: 800px;
+	}
+
+
+}
+
+
+.render {
+	background: #fff;
+	min-height: 500px;
+}
+
+
+
+
+// utilities
+
+.vector-arrow {
+	display: block;
+	margin: 55px auto;
+}
+
+
+// footer
+
+footer {
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 50px;
+	
+	background: $blue-light;
+	
+	.social-icons {
+		position: absolute;
+		left: 0px; 
+		top: 3px;
+		
+		li {
+			position: relative;
+			float: left;
+			margin-right: 15px;
+		}
+	}
+	
+	.copyright {
+		display: block;
+		margin-top: 15px;
+		
+		font-family: $open-sans;
+		font-size: 12px;
+		color: #fff;
+		text-align: center;
+		
+		a {
+			margin-left: 25px;
+			color: #fff;
+			
+			&:before {
+				content: ".";
+				position: absolute;
+				margin-left: -14px;
+				margin-top: -2px;
+				
+				font-family: "Georgia";
+			}
+		}
+	}
+	
+	.btn-scroll-up {
+		position: absolute;
+		right: 0px;
+		top: 1px;
+	}
+}
+
+
