@@ -1,6 +1,6 @@
+/* variables */
 @import url(sass/_includes/_normalize.css);
 @import url(sass/_includes/_colorbox.css);
-/* variables */
 @font-face {
   font-family: "oswaldregular";
   font-style: normal;
@@ -8,7 +8,6 @@
   /* IE 9 Compat Modes */
   src: url("fonts/oswaldregular.eot");
   src: url("fonts/oswald-regular.eot?") format("eot"), url("fonts/oswald-regular.woff") format("woff"), url("fonts/oswald-regular.ttf") format("truetype"), url("fonts/oswald-regular.svg") format("svg"); }
-
 @font-face {
   font-family: "oswaldlight";
   font-style: normal;
@@ -16,7 +15,6 @@
   /* IE 9 Compat Modes */
   src: url("fonts/oswald-light.eot");
   src: url("fonts/oswald-light.eot?") format("eot"), url("fonts/oswald-light.woff") format("woff"), url("fonts/oswald-light.ttf") format("truetype"), url("fonts/oswald-light.svg") format("svg"); }
-
 @font-face {
   font-family: "oswaldbold";
   font-style: normal;
@@ -24,7 +22,6 @@
   /* IE 9 Compat Modes */
   src: url("fonts/oswald-bold.eot");
   src: url("fonts/oswald-bold.eot?") format("eot"), url("fonts/oswald-bold.woff") format("woff"), url("fonts/oswald-bold.ttf") format("truetype"), url("fonts/oswald-bold.svg") format("svg"); }
-
 @font-face {
   font-family: "mission_scriptregular";
   font-style: normal;
@@ -32,7 +29,6 @@
   /* IE 9 Compat Modes */
   src: url("fonts/mission.eot");
   src: url("fonts/mission.eot?") format("eot"), url("fonts/mission.woff") format("woff"), url("fonts/mission.ttf") format("truetype"), url("fonts/mission.svg") format("svg"); }
-
 * {
   z-index: 1;
   margin: 0;
@@ -97,11 +93,6 @@ p {
     .cta span.bottom {
       font-family: "mission_scriptregular", sans-serif;
       font-size: 26px; }
-	  
-.cta.hoverstate {
-	background-color: #fff; }
-.cta span.hoverstate {
-	color: #4A74A7; }
 
 nav.main {
   position: fixed;
@@ -437,6 +428,10 @@ footer {
       display: block;
       margin: 50px auto 0;
       clear: both; }
+      #home section.carousel #slides li .cta .cta.hoverstate {
+        background-color: #fff; }
+      #home section.carousel #slides li .cta .cta span.hoverstate {
+        color: #4A74A7; }
     #home section.carousel #slides li:nth-of-type(2) h1 {
       position: relative;
       float: left;
@@ -462,7 +457,7 @@ footer {
     #home section.carousel #slides li:nth-of-type(3) h1 {
       position: relative;
       float: left;
-      margin-top: 245px;
+      margin-top: 219px;
       font-size: 42px;
       color: #1e5898;
       line-height: 1.2em; }
@@ -482,6 +477,20 @@ footer {
       border: solid 1px #1e5898; }
       #home section.carousel #slides li:nth-of-type(3) .cta span {
         color: #1e5898; }
+    #home section.carousel #slides li:nth-of-type(4) h1 {
+      position: relative;
+      margin: 219px auto 0;
+      font-size: 60px;
+      color: #fff;
+      text-align: center; }
+    #home section.carousel #slides li:nth-of-type(4) .cta {
+      display: block;
+      margin: 80px auto 0;
+      clear: both; }
+      #home section.carousel #slides li:nth-of-type(4) .cta .cta.hoverstate {
+        background-color: #fff; }
+      #home section.carousel #slides li:nth-of-type(4) .cta .cta span.hoverstate {
+        color: #4A74A7; }
   #home section.carousel .slidesjs-pagination {
     position: absolute;
     bottom: 40px;
@@ -605,8 +614,6 @@ footer {
         color: #fed530;
         text-transform: uppercase;
         letter-spacing: 3px; }
-      #home section.sitelinks .links li a:hover {
-        color: #fff; }		
         #home section.sitelinks .links li a:after {
           content: ".";
           position: absolute;
@@ -880,8 +887,6 @@ footer {
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')"; }
   #camps section.academy .heading.bg-coaching {
     background: #1e5898; }
-  #camps section.academy .heading.bg-florida {
-    background: #FDC323; }	
   #camps section.academy .heading h1 {
     position: relative;
     display: block;
@@ -903,10 +908,10 @@ footer {
     position: relative;
     float: left;
     width: 380px;
-    margin-right: 60px; 
-	font-family: "Open Sans", sans-serif;
-	font-size: 14px;
-	color: #5a5a5a; }
+    margin-right: 60px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #5a5a5a; }
     #camps section.academy .section-content aside .logo-aca {
       margin-bottom: 50px;
       width: 380px; }
@@ -915,8 +920,7 @@ footer {
       font-size: 18px;
       text-transform: uppercase;
       color: #1e5898;
-      letter-spacing: 2px; 
-	  font-weight: 300 }
+      letter-spacing: 2px; }
     #camps section.academy .section-content aside ul {
       margin: 25px 0; }
       #camps section.academy .section-content aside ul li {
@@ -959,12 +963,6 @@ footer {
     position: relative;
     float: left;
     width: 740px; }
-  #camps section.academy .section-content .content-info ul {
-    color: #5A5A5A;
-	font-size: 14px;
-	line-height: 1.7em; }	
-  #camps section.academy .section-content .content-info ul li {
-    margin-bottom: 25px; }		
     #camps section.academy .section-content .content-info .tmb-video {
       position: relative;
       float: left;
@@ -1101,3 +1099,47 @@ footer {
 #japan section.map img {
   width: 100%;
   position: relative; }
+#japan section.map .countdown {
+  position: absolute;
+  width: 433px;
+  height: 251px;
+  background: #fed530;
+  z-index: 2;
+  top: 230px;
+  left: 50%;
+  margin-left: -216px;
+  color: #fff;
+  text-align: center; }
+#japan section.map .counter {
+  background: #edc445;
+  width: 397px;
+  height: 118px;
+  margin: 18px 18px 15px; }
+#japan section.map .countdown_timer {
+  font-family: "oswaldlight",sans-serif;
+  font-size: 58px;
+  margin: 3px 0 3px 65px;
+  padding: 2px 0; }
+#japan section.map .days {
+  width: 110px;
+  float: left; }
+#japan section.map .hrs {
+  width: 100px;
+  float: left; }
+#japan section.map .min {
+  width: 70px;
+  float: left; }
+#japan section.map .text1 {
+  float: left;
+  font-size: 14px;
+  margin-left: 80px; }
+#japan section.map .text2 {
+  float: left;
+  font-size: 14px;
+  margin-left: 72px; }
+#japan section.map .text3 {
+  float: left;
+  font-size: 14px;
+  margin-left: 74px; }
+#japan section.map .clear {
+  clear: both; }

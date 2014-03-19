@@ -8,7 +8,35 @@ section.map {
 		width: 100%;
 		position: relative;
 	}
-}
+	
+	.countdown { 
+		position: absolute; 
+		width: 433px; height: 251px;
+		background: #fed530;
+		z-index: 2;
+		top: 230px;
+		left: 50%;
+		margin-left: -216px;
+		color: #fff;
+		text-align: center;
+	}
+	.counter {
+		background: #edc445;
+		width: 397px;
+		height: 118px;
+		margin: 18px 18px 15px
+	}
+	
+	.countdown_timer { font-family: "oswaldlight",sans-serif; font-size: 58px; margin: 3px 0 3px 65px; padding: 2px 0; }
+	.days { width: 110px; float: left; }
+	.hrs { width: 100px; float: left; }
+	.min { width: 65px; float: left; }	
 
+	.text1 { float: left; font-size: 14px; margin-left: 80px; }
+	.text2 { float: left; font-size: 14px; margin-left: 72px; }
+	.text3 { float: left; font-size: 14px; margin-left: 74px; }	
+	.clear { clear: both; }				
+	
+}
 
 }

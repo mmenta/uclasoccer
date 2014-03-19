@@ -30,9 +30,18 @@
 			</div> <!--/container-->
 			<img src="images/bg-camp-carousel.jpg" class="slide-bg" />
 		</li>
+		<li>
+			<div class="container">
+				<h1>JOIN THE<br />#BRUINSINJAPAN</h1>
+		
+				<a href="/japan" class="cta">
+					<span class="top">BRUINS</span><span class="bottom">in Japan</span>
+				</a>
+			</div> <!--/container-->
+			<img src="images/slide-japan.jpg" class="slide-bg" />
+		</li>        
 	</div>
 </section>
-
 
 <section class="title-bar">
 	<div class="container">

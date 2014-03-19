@@ -34,6 +34,11 @@ section.carousel {
 				display: block;
 				margin: 50px auto 0;
 				clear: both;
+				
+				.cta.hoverstate {
+					background-color: #fff; }
+				.cta span.hoverstate {
+					color: #4A74A7; }				
 			}
 			
 			&:nth-of-type(2) {
@@ -76,7 +81,7 @@ section.carousel {
 				h1 {
 					position:relative;
 					float: left;
-					margin-top: 245px;
+					margin-top: 219px;
 					
 					font-size: 42px;
 					color: $blue;
@@ -106,7 +111,32 @@ section.carousel {
 						color: $blue;
 					}
 				}
-			}
+			}	
+			
+			
+			&:nth-of-type(4) {
+				
+				h1 {
+					position: relative;
+					margin: 219px auto 0;
+					
+					font-size: 60px;
+					color: #fff;
+					text-align: center;
+				}
+	
+				.cta {
+					display: block;
+					margin: 80px auto 0;
+					clear: both;
+					
+					.cta.hoverstate {
+						background-color: #fff; }
+					.cta span.hoverstate {
+						color: #4A74A7; }				
+				}
+				
+			}					
 		}
 	}
 	
@@ -289,7 +319,7 @@ section.sitelinks {
 				}
 			}
 			
-			&:nth-of-type(6) a:after {
+			&:nth-of-type(5) a:after {
 				content: "";
 			}	
 			
