@@ -887,6 +887,8 @@ footer {
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')"; }
   #camps section.academy .heading.bg-coaching {
     background: #1e5898; }
+  #camps section.academy .heading.bg-florida {
+    background: #fed530; }
   #camps section.academy .heading h1 {
     position: relative;
     display: block;
@@ -976,6 +978,11 @@ footer {
       font-size: 14px;
       color: #5a5a5a;
       line-height: 1.7em; }
+    #camps section.academy .section-content .content-info ul li {
+      color: #5A5A5A;
+      font-size: 14px;
+      line-height: 1.7em;
+      margin-bottom: 25px; }
     #camps section.academy .section-content .content-info .cta span {
       color: #1e5898; }
 

@@ -79,6 +79,11 @@ section.academy {
 			background: $blue;
 		}
 		
+		&.bg-florida {
+			background: $yellow;
+		}		
+	
+		
 		h1 {
 			position: relative;
 			display: block;
@@ -207,6 +212,13 @@ section.academy {
 				font-size: 14px;
 				color: #5a5a5a;
 				line-height: 1.7em;
+			}
+			
+			ul li {			
+			    color: #5A5A5A;
+			    font-size: 14px;
+			    line-height: 1.7em;	
+				margin-bottom: 25px;						
 			}
 			
 			.cta span {
