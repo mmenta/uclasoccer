@@ -1,3 +1,23 @@
+<?php
+// turn on error reporting
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+//$usersTwitter = array('uclasoccer', 'cromwellucla', 'joshwalterssr', 'louisek06', 'sammaysosa29', 'cwinter16', 'sammymewy'); 
+//$hashTwitter = '#bruinsinJapan';
+
+$hash = 'cleatsup';
+
+$model = $Model->getInstagramHash($hash, '');
+
+
+
+
+
+
+?>
+
+
 <!-- all html for page goes here -->
 
 <section class="map">
@@ -18,5 +38,23 @@
     </div>
 
 	<img src="/images/static-map.jpg" />
+
+</section>
+
+
+<section class="letters">
+
+
+
+</section>
+
+
+<section class="social">
+<?php
+echo '<pre>';
+print_r($model);
+echo '</pre>';
+?>
+
 
 </section>

@@ -34,7 +34,7 @@ section.map {
 		margin: 18px 18px 15px
 	}
 	
-	.countdown_timer { font-family: "oswaldlight",sans-serif; font-size: 58px; margin: 3px 0 3px 65px; padding: 2px 0; }
+	.countdown_timer { font-family: $oswald-light; font-size: 58px; margin: 3px 0 3px 65px; padding: 2px 0; }
 	.days { width: 110px; float: left; }
 	.hrs { width: 110px; float: left; }
 	.min { width: 65px; float: left; }	

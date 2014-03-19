@@ -11,11 +11,10 @@ class Twitter {
 	private $accesstokensecret = 'zvoArGbc7izpm56lLssM5rZPP0dUphX66R1EBkHDNJ5nw';	
 	private $twitter;
 	
+	//NEEDS WORK, fix so that handle doesn't need to be passed
 	function __construct($handle, $count) { // pass twitter handle
 		$this->limit = $count;
-		
 		$this->handle = $handle;
-		
 		$this->twitter = new TwitterOAuth($this->consumerkey, $this->consumersecret, $this->accesstoken, $this->accesstokensecret);
 	}
 	
@@ -49,21 +48,46 @@ class Twitter {
 		
 		return $tweetArr;
 	}
+	
+	function getPostHash($hash, $users) {
+		//EXPENSIVE FUNCTION, try to find a better way to do this
+		foreach( $users as $user ) {
+			$from = urlencode('?'.$hash.'+AND+from:@'.$user);
+			$query = 'https://api.twitter.com/1.1/search/tweets.json?q='.$from.'&result_type=recent';
+			$tweets = $this->twitter->get($query);
+			
+			foreach( $tweets->statuses as $tweet ) {
+				$date = strtotime($tweet->created_at);
+				
+				//check for image
+				$img = isset( $tweet->entities->media[0]->media_url) ?  $tweet->entities->media[0]->media_url : "";
 
+				$tweetArr[] = array( 'id' => $tweet->id_str, 'user' => $tweet->user->name, 'text' => $tweet->text, 'img' => $img, 'date' => $date );
+			}
+		}
+		
+		return $tweetArr;
+	}
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -79,6 +79,18 @@ class Instagram {
 		return $instagramArr;
 	}
 	
+	function getPostHash($hash, $users) {
+	
+		$endpoint = 'https://api.instagram.com/v1/tags/'.$hash.'/media/recent?client_id='.$this->client_id;
+		
+	
+		$data = $this->doCurl($endpoint);
+	
+	
+		return $data;
+	
+	}
+	
 }
 
 

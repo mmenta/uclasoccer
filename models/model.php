@@ -3,7 +3,6 @@ class Model {
 	
 	public $mainUrl;
 	public $subUrl;
-	//public $docRoot = $_SERVER['DOCUMENT_ROOT'];
 	
     function __construct($url) {
 		$this->mainUrl = $url[0];
@@ -58,6 +57,8 @@ class Model {
 	}
 	
 	// Social Functions ===================================
+	
+	// TWITTER ==========
 	function getTwitter($page, $count) {
 		require_once($this->docroot . '/models/twitter.php');
 		
@@ -75,6 +76,17 @@ class Model {
 		
 		return $tweet;
 	}
+	
+	function getTwitterHash($hash, $users) {
+		require_once($this->docroot . '/models/twitter.php');
+	
+		$Twitter = new Twitter($this->twitterHandle, '1');
+		$tweet = $Twitter->getPostHash($hash, $users);
+		
+		return $tweets;
+	}
+	
+	// INSTAGRAM ========
 	
 	function getInstagram($page, $count) {
 		require_once($this->docroot . '/models/instagram.php');
@@ -94,6 +106,17 @@ class Model {
 		return $instagrams;
 	}
 	
+	function getInstagramHash($hash, $users) {
+		require_once($this->docroot . '/models/instagram.php');
+	
+		$Instagram  = new Instagram($this->instagramId, '1');
+		$instagrams = $Instagram->getPostHash($hash, $users);
+		
+		return $instagrams;
+	}
+	
+	// FACEBOOK ========
+	
 	function getFacebook($page, $count) {
 		require_once($this->docroot . '/models/facebook.php');
 		
@@ -112,9 +135,15 @@ class Model {
 		return $facebook;
 	}
 	
+	
+	
 	function socialAll($page, $count) {
 	
-		$socialArray = array_merge((array)$this->getTwitter($page, $count), (array)$this->getInstagram($page, $count), (array)$this->getFacebook($page, $count));
+		$socialArray = array_merge(
+			(array)$this->getTwitter($page, $count), 
+			(array)$this->getInstagram($page, $count), 
+			(array)$this->getFacebook($page, $count)
+		);
 		
 		shuffle($socialArray);
 		
