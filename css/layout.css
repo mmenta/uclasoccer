@@ -1124,10 +1124,10 @@ footer {
   width: 110px;
   float: left; }
 #japan section.map .hrs {
-  width: 100px;
+  width: 110px;
   float: left; }
 #japan section.map .min {
-  width: 70px;
+  width: 65px;
   float: left; }
 #japan section.map .text1 {
   float: left;
@@ -1140,6 +1140,6 @@ footer {
 #japan section.map .text3 {
   float: left;
   font-size: 14px;
-  margin-left: 74px; }
+  margin-left: 82px; }
 #japan section.map .clear {
   clear: both; }
