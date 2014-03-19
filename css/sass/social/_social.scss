@@ -2,6 +2,13 @@
 
 #social {
 
+.cta {					
+	&.hoverstate {
+	background-color: #fff; }
+	span.hoverstate {
+	color: #4A74A7; }	
+}	
+
 .social {
 	padding: 85px 0;
 	background: #f2f2f2;

@@ -2,6 +2,13 @@
 
 #camps {
 
+.cta {					
+	&.hoverstate {
+	background-color: #fff; }
+	span.hoverstate {
+	color: #4A74A7; }	
+}	
+
 section.camp-header {
 	margin-top: 100px;
 	height: 695px;

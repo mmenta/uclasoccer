@@ -2,6 +2,13 @@
 
 #program {
 
+.cta {					
+	&.hoverstate {
+	background-color: #fff; }
+	span.hoverstate {
+	color: #4A74A7; }	
+}	
+
 section.program-header {
 	margin-top: 100px;
 	height: 697px;

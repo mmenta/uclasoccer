@@ -407,6 +407,10 @@ footer {
     top: 1px; }
 
 /* homepage ============================= */
+#home .cta.hoverstate {
+  background-color: #fff; }
+#home .cta span.hoverstate {
+  color: #4A74A7; }
 #home section.carousel {
   overflow: hidden; }
   #home section.carousel #slides {
@@ -487,10 +491,6 @@ footer {
       display: block;
       margin: 80px auto 0;
       clear: both; }
-      #home section.carousel #slides li:nth-of-type(4) .cta .cta.hoverstate {
-        background-color: #fff; }
-      #home section.carousel #slides li:nth-of-type(4) .cta .cta span.hoverstate {
-        color: #4A74A7; }
   #home section.carousel .slidesjs-pagination {
     position: absolute;
     bottom: 40px;
@@ -631,6 +631,10 @@ footer {
     clear: both; }
 
 /* coach ================================ */
+#coach .cta.hoverstate {
+  background-color: #fff; }
+#coach .cta span.hoverstate {
+  color: #4A74A7; }
 #coach section.coach-header {
   margin-top: 100px;
   height: 640px;
@@ -827,6 +831,10 @@ footer {
   width: 100%; }
 
 /* camp ================================ */
+#camps .cta.hoverstate {
+  background-color: #fff; }
+#camps .cta span.hoverstate {
+  color: #4A74A7; }
 #camps section.camp-header {
   margin-top: 100px;
   height: 695px;
@@ -987,6 +995,10 @@ footer {
       color: #1e5898; }
 
 /* program ================================ */
+#program .cta.hoverstate {
+  background-color: #fff; }
+#program .cta span.hoverstate {
+  color: #4A74A7; }
 #program section.program-header {
   margin-top: 100px;
   height: 697px;
@@ -1094,6 +1106,10 @@ footer {
       color: #1e5898; }
 
 /* social ================================ */
+#social .cta.hoverstate {
+  background-color: #fff; }
+#social .cta span.hoverstate {
+  color: #4A74A7; }
 #social .social {
   padding: 85px 0;
   background: #f2f2f2; }
@@ -1103,6 +1119,10 @@ footer {
     top: 13px; }
 
 /* japan ================================ */
+#japan .cta.hoverstate {
+  background-color: #fff; }
+#japan .cta span.hoverstate {
+  color: #4A74A7; }
 #japan section.map img {
   width: 100%;
   position: relative; }

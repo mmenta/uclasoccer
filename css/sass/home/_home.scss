@@ -2,6 +2,12 @@
 
 #home {
 
+.cta {					
+	&.hoverstate {
+	background-color: #fff; }
+	span.hoverstate {
+	color: #4A74A7; }	
+}			
 
 section.carousel {
 	overflow: hidden;
@@ -129,11 +135,6 @@ section.carousel {
 					display: block;
 					margin: 80px auto 0;
 					clear: both;
-					
-					.cta.hoverstate {
-						background-color: #fff; }
-					.cta span.hoverstate {
-						color: #4A74A7; }				
 				}
 				
 			}					
