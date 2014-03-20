@@ -1388,6 +1388,17 @@ footer {
     margin-top: 55px; }
   #japan section.social .hashtag-label {
     margin-top: 10px; }
+  #japan section.social .backtomap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 13px;
+    font-family: "oswaldregular", sans-serif;
+    text-transform: uppercase;
+    color: #1e5898;
+    cursor: pointer; }
+    #japan section.social .backtomap:before {
+      content: url(../images/arrow-blue-up.jpg); }
 #japan .boarding-pass-modal {
   position: fixed;
   width: 997px;

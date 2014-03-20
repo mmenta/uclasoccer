@@ -336,6 +336,22 @@ section.social {
 		margin-top: 10px;
 	}
 	
+	.backtomap {
+		position: absolute;
+		left: 0; 
+		top: 0;
+		font-size: 13px;
+		font-family: $oswald-regular;
+		text-transform: uppercase;
+		color: $blue;
+		cursor: pointer;
+		
+		&:before {
+			content: url(../images/arrow-blue-up.jpg);
+			
+		}
+	}
+	
 }
 
 
