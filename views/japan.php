@@ -103,7 +103,7 @@ $dbname = "512772_uclasoccer";
             <div class="items-wrap">
                 <ul id="items">
 					<?
-					/*
+					
 						$cnn = mysql_connect($dbserver, $dbusername, $dbpassword);
 						$cmd = mysql_select_db($dbname, $cnn);							
 						
@@ -119,7 +119,7 @@ $dbname = "512772_uclasoccer";
 							$timeago = ago($timestamp);
 					?>
                             <!-- TWITTER POST -->
-                            <li>
+<!--                             <li>
                                 <div class="overlay"></div>
                                 <div class="info">
                                     <div class="photo"><img src="http://placehold.it/58x58" /></div>
@@ -130,7 +130,7 @@ $dbname = "512772_uclasoccer";
                                     </div>
                                     <div class="message">Excited to watch @UVAMensHoops beat the Cuse to win the #ACC  #proudalumni #Wahoowa</div>
                                 </div>                        
-                            </li>                                                
+                            </li>  -->                                               
                             
                             <!-- TEXT SUBMISSION -->
                             <li>
@@ -148,7 +148,7 @@ $dbname = "512772_uclasoccer";
                         }
 						
 						mysql_close($cnn);
-						*/
+						
                     ?>                                
                 </ul>
 			</div>
