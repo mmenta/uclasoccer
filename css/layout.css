@@ -1,6 +1,6 @@
+/* variables */
 @import url(sass/_includes/_normalize.css);
 @import url(sass/_includes/_colorbox.css);
-/* variables */
 @font-face {
   font-family: "oswaldregular";
   font-style: normal;
@@ -8,7 +8,6 @@
   /* IE 9 Compat Modes */
   src: url("fonts/oswaldregular.eot");
   src: url("fonts/oswald-regular.eot?") format("eot"), url("fonts/oswald-regular.woff") format("woff"), url("fonts/oswald-regular.ttf") format("truetype"), url("fonts/oswald-regular.svg") format("svg"); }
-
 @font-face {
   font-family: "oswaldlight";
   font-style: normal;
@@ -16,7 +15,6 @@
   /* IE 9 Compat Modes */
   src: url("fonts/oswald-light.eot");
   src: url("fonts/oswald-light.eot?") format("eot"), url("fonts/oswald-light.woff") format("woff"), url("fonts/oswald-light.ttf") format("truetype"), url("fonts/oswald-light.svg") format("svg"); }
-
 @font-face {
   font-family: "oswaldbold";
   font-style: normal;
@@ -24,7 +22,6 @@
   /* IE 9 Compat Modes */
   src: url("fonts/oswald-bold.eot");
   src: url("fonts/oswald-bold.eot?") format("eot"), url("fonts/oswald-bold.woff") format("woff"), url("fonts/oswald-bold.ttf") format("truetype"), url("fonts/oswald-bold.svg") format("svg"); }
-
 @font-face {
   font-family: "mission_scriptregular";
   font-style: normal;
@@ -32,7 +29,6 @@
   /* IE 9 Compat Modes */
   src: url("fonts/mission.eot");
   src: url("fonts/mission.eot?") format("eot"), url("fonts/mission.woff") format("woff"), url("fonts/mission.ttf") format("truetype"), url("fonts/mission.svg") format("svg"); }
-
 * {
   z-index: 1;
   margin: 0;
