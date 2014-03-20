@@ -197,6 +197,9 @@ $dbname = "512772_uclasoccer";
 <section class="social">
 
 	<div class="container">
+		
+		<p class="backtomap">Back to map</p>
+		
 		<p class="sub-text">Posts from the team</p>
 		<h1 class="hashtag-label">#CLEATSUP</h1>
 		<img class="loading" src="images/icon-loader.gif" />

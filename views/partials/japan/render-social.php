@@ -32,9 +32,11 @@ switch($_GET['type']) {
 				
 		break;
 	case 'twitter':
-		 $modelTwitter = $Model->getTwitterHash($hash, $usersTwitter); break;
+		$modelTwitter = $Model->getTwitterHash($hash, $usersTwitter); break;
+		$model = $modelTwitter;
 	case 'instagram':
 		$modelInstagram = $Model->getInstagramHash($hash, $usersInstagram); break;
+		$model = $modelInstagram;
 	default:
 		$modelTwitter = $Model->getTwitterHash($hash, $usersTwitter);
 		$modelInstagram = $Model->getInstagramHash($hash, $usersInstagram);

@@ -61,7 +61,7 @@
 					$(".social-filter").val(filter);
 					//reset pagination
 					$(".social-page").val('1');
-					var hashtag = $(this).children(".hashtag").val();
+					var hashtag = $(".social-hashtag").val();
 					var rend = 'html';
 
 					$.ajax({
@@ -115,6 +115,14 @@
 						
 						$(".loading").hide();
 					});
+				
+				});
+				
+				$(".backtomap").click(function() {
+					var scrollPos = 0;
+					$('html, body').animate({
+						scrollTop: scrollPos
+					}, 300, 'easeOutQuad');
 				
 				});
 				
