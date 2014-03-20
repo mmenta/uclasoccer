@@ -6,6 +6,7 @@ $blue:         #1e5898;
 $blue-light:   #0078ce;
 $yellow:       #fed530;
 $grey:		   #5A5A5A;
+$white:		   #FFFFFF;
 
 
 // fonts
@@ -103,4 +104,22 @@ $open-sans:				'Open Sans', sans-serif;
 	//ie fix
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+}
+
+// border radius
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// opacity
+
+@mixin opacity ( $value: 0.5 ) {
+	opacity: $value;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" $value * 100 ")";
+	filter: alpha(opacity= $value * 100 );
+	zoom: 1;
 }

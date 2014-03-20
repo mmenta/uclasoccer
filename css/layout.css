@@ -1143,7 +1143,7 @@ footer {
   height: 118px;
   margin: 18px 18px 15px; }
 #japan section.map .countdown_timer {
-  font-family: "oswaldlight",sans-serif;
+  font-family: "oswaldlight", sans-serif;
   font-size: 58px;
   margin: 3px 0 3px 65px;
   padding: 2px 0; }
@@ -1170,3 +1170,187 @@ footer {
   margin-left: 82px; }
 #japan section.map .clear {
   clear: both; }
+#japan section.letters {
+  background: white;
+  height: 406px; }
+  #japan section.letters .content {
+    padding: 55px 0 0 0;
+    width: 1181px;
+    margin: 0 auto; }
+    #japan section.letters .content .letter-wrap {
+      background-image: url(../images/bg-japan-letters.jpg);
+      background-repeat: no-repeat;
+      display: block;
+      width: 1181px;
+      height: 232px; }
+      #japan section.letters .content .letter-wrap .controls {
+        float: left;
+        width: 139px;
+        padding: 53px 58px 0 58px; }
+        #japan section.letters .content .letter-wrap .controls span {
+          display: block;
+          text-align: center;
+          line-height: 1.1em; }
+          #japan section.letters .content .letter-wrap .controls span.top {
+            font-family: "oswaldregular", sans-serif;
+            color: #44536f;
+            font-size: 19px;
+            text-transform: uppercase;
+            letter-spacing: 2px; }
+          #japan section.letters .content .letter-wrap .controls span.bottom {
+            font-family: "mission_scriptregular", sans-serif;
+            font-size: 33px;
+            color: #1e5898;
+            margin-bottom: 24px; }
+      #japan section.letters .content .letter-wrap .items-wrap {
+        width: 926px;
+        height: 232px;
+        position: relative;
+        float: left; }
+        #japan section.letters .content .letter-wrap .items-wrap ul#items {
+          width: 5000px;
+          margin-top: 19px; }
+          #japan section.letters .content .letter-wrap .items-wrap ul#items li {
+            width: 398px;
+            height: 199px;
+            position: relative;
+            margin-right: 10px;
+            float: left; }
+            #japan section.letters .content .letter-wrap .items-wrap ul#items li .overlay {
+              opacity: 0.6;
+              -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 60 ")";
+              filter: alpha(opacity=60);
+              zoom: 1;
+              background: #fff;
+              position: absolute;
+              width: 398px;
+              height: 199px;
+              z-index: -1; }
+            #japan section.letters .content .letter-wrap .items-wrap ul#items li .info {
+              padding: 28px;
+              font-family: 'Open Sans', sans-serif;
+              font-size: 13px;
+              line-height: 1.5em;
+              letter-spacing: 1px;
+              color: #5a5a5a; }
+              #japan section.letters .content .letter-wrap .items-wrap ul#items li .info .photo {
+                padding: 0 15px 0 0;
+                float: left; }
+              #japan section.letters .content .letter-wrap .items-wrap ul#items li .info .profile {
+                float: left; }
+              #japan section.letters .content .letter-wrap .items-wrap ul#items li .info .message {
+                clear: both;
+                padding-top: 10px; }
+    #japan section.letters .content .btn_send {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      background-color: #fed530;
+      float: right;
+      text-align: center;
+      line-height: 3.2em;
+      margin-top: 31px;
+      color: #1e5898;
+      font-family: "oswaldlight", sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      width: 235px;
+      height: 45px; }
+    #japan section.letters .content .btn_send:hover {
+      background-color: #1e5898;
+      color: white; }
+#japan #postcard {
+  padding: 34px;
+  text-align: center;
+  background-color: white; }
+  #japan #postcard h1 {
+    color: #fed530;
+    font-size: 27px;
+    font-family: "oswaldlight", sans-serif; }
+  #japan #postcard .btn_tweet {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #25b0cc;
+    text-align: center;
+    line-height: 3.2em;
+    margin: 20px auto;
+    color: #fff;
+    font-family: "oswaldlight", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    width: 235px;
+    height: 45px; }
+    #japan #postcard .btn_tweet img {
+      margin-right: 16px; }
+  #japan #postcard .note {
+    font-size: 11px;
+    color: #5a5a5a;
+    margin-bottom: 31px; }
+  #japan #postcard form {
+    font-family: 'Open Sans', sans-serif;
+    border-top: solid 1px #e7e5e6;
+    padding-top: 24px; }
+    #japan #postcard form h3 {
+      color: #1f5998;
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 20px; }
+    #japan #postcard form p {
+      font-size: 13px;
+      color: #5a5a5a;
+      margin-bottom: 20px; }
+    #japan #postcard form input, #japan #postcard form textarea {
+      font-family: 'Open Sans', sans-serif;
+      border: solid 1px #ebebeb;
+      font-size: 13px;
+      width: 327px;
+      padding: 17px 17px;
+      height: 17px;
+      margin-bottom: 7px; }
+    #japan #postcard form textarea {
+      height: 117px; }
+    #japan #postcard form .cta {
+      border: 1px solid #1E5898;
+      margin-top: 10px;
+      cursor: pointer; }
+      #japan #postcard form .cta span {
+        color: #1e5898; }
+  #japan #postcard .success {
+    display: none; }
+    #japan #postcard .success h1 {
+      color: #1e5898; }
+    #japan #postcard .success p {
+      margin-top: 17px; }
+#japan .bx-wrapper {
+  position: relative;
+  margin: 0 auto 60px;
+  padding: 0;
+  *zoom: 1; }
+  #japan .bx-wrapper .bx-pager,
+  #japan .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: -30px;
+    width: 100%; }
+  #japan .bx-wrapper .bx-prev {
+    background-image: url(../images/btn_prev.png);
+    left: -197px; }
+  #japan .bx-wrapper .bx-next {
+    background-image: url(../images/btn_next.png);
+    left: -121px; }
+  #japan .bx-wrapper .bx-prev:hover {
+    background-image: url(../images/btn_prev_over.png); }
+  #japan .bx-wrapper .bx-next:hover {
+    background-image: url(../images/btn_next_over.png); }
+  #japan .bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 134px;
+    outline: 0;
+    width: 59px;
+    height: 59px;
+    text-indent: -9999px;
+    z-index: 9999; }
+  #japan .bx-wrapper .bx-controls-direction a.disabled {
+    display: none; }

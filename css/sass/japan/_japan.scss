@@ -46,4 +46,248 @@ section.map {
 	
 }
 
+section.letters {
+	background: $white;
+	height: 406px;
+
+	.content {
+		padding: 55px 0 0 0;
+		width: 1181px;
+		margin: 0 auto;
+	
+		.letter-wrap {
+			background-image: url(../images/bg-japan-letters.jpg);
+			background-repeat: no-repeat;
+			display: block;
+			width: 1181px;
+			height: 232px;
+
+			.controls {
+				float: left;
+				width: 139px;
+				padding: 53px 58px 0 58px;
+
+				span {
+					display: block;
+					text-align: center;
+					line-height: 1.1em;
+					
+					&.top {					
+						font-family: $oswald-regular;
+						color: #44536f;
+						font-size: 19px;
+						text-transform: uppercase;	
+						letter-spacing: 2px;
+					}
+					
+					&.bottom {
+						font-family: $mission;
+						font-size: 33px;	
+						color: $blue;
+						margin-bottom: 24px;						
+					}
+				}									
+			}
+			
+			.items-wrap {
+				width: 926px;
+				height: 232px;
+				position: relative;
+				float: left;
+			
+				ul#items {
+					width: 5000px;
+					margin-top: 19px;
+				
+					li { 
+						width: 398px; 
+						height: 199px; 
+						position: relative;					 
+						margin-right: 10px;
+						float: left;
+	
+						.overlay { 
+							@include opacity(.6);
+							background: #fff;
+							position: absolute;
+							width: 398px; 
+							height: 199px; 						
+							z-index: -1;
+						}	
+					
+						.info {
+							padding: 28px;
+							font-family: 'Open Sans', sans-serif;						
+							font-size: 13px;
+							line-height: 1.5em;
+							letter-spacing: 1px;
+							color: $grey;
+							
+							.photo { 
+								padding: 0 15px 0 0;							
+								float: left; }
+							.profile { 
+								float: left; }							
+								
+							.message {
+								clear: both;
+								padding-top: 10px;
+							}
+						}
+					}
+				}
+			}		
+		}
+		.btn_send { 
+			@include border-radius(5px);	
+			background-color: $yellow;	
+			float: right;
+			text-align: center;
+			line-height: 3.2em;
+			margin-top: 31px;
+			color: $blue;
+			font-family: $oswald-light;
+			font-size: 14px;
+			cursor: pointer;
+			width: 235px; 
+			height: 45px; }
+		.btn_send:hover { 
+			background-color: $blue;	
+			color: $white; }		
+	}		
+}
+
+	#postcard {
+		padding: 34px;
+		text-align: center;
+		background-color: $white;
+	
+		h1 {
+			color: $yellow;
+			font-size: 27px;
+			font-family: $oswald-light;
+		}
+		
+		.btn_tweet { 
+			@include border-radius(5px);	
+			background-color: #25b0cc;	
+			text-align: center;
+			line-height: 3.2em;
+			margin: 20px auto;
+			color: #fff;
+			font-family: $oswald-light;
+			font-size: 14px;
+			cursor: pointer;
+			width: 235px; 
+			height: 45px; 
+			
+			img {
+				margin-right: 16px;
+			}	
+		}
+		
+		.note {
+			 font-size: 11px;
+			 color: $grey;
+			 margin-bottom: 31px;		 
+		}
+		
+		form {
+			font-family: 'Open Sans', sans-serif;		
+			border-top: solid 1px #e7e5e6;
+			padding-top: 24px;
+			
+			h3 {
+				color: #1f5998;
+				font-size: 18px;
+				font-weight: 400;
+				margin-bottom: 20px;
+			}
+			
+			p {
+				font-size: 13px;
+				color: $grey;
+				margin-bottom: 20px;				
+			}
+			
+			input, textarea { 
+				font-family: 'Open Sans', sans-serif;					
+				border: solid 1px #ebebeb;
+				font-size: 13px;
+				width: 327px;
+				padding: 17px 17px;
+				height: 17px; 
+				margin-bottom: 7px; 
+			}
+				
+			textarea { 
+				height: 117px; }
+				
+			.cta {
+				border: 1px solid #1E5898;
+				margin-top: 10px;
+				cursor: pointer;
+				
+				span {
+					color: $blue; }			
+			}				
+		}
+		
+    	.success {
+			display: none;
+		
+            h1 {
+				color: $blue;
+			}
+			
+			p {
+				margin-top: 17px;
+			}
+		}		
+				
+	}
+	
+	.bx-wrapper {
+		position: relative;
+		margin: 0 auto 60px;
+		padding: 0;
+		*zoom: 1;
+			
+		.bx-pager,
+		.bx-controls-auto {
+			position: absolute;
+			bottom: -30px;
+			width: 100%;
+		}
+		
+		.bx-prev {
+			background-image: url(../images/btn_prev.png);
+			left: -197px }
+		
+		.bx-next {
+			background-image: url(../images/btn_next.png);
+			left: -121px; }
+		
+		.bx-prev:hover {
+			background-image: url(../images/btn_prev_over.png);
+		}
+		
+		.bx-next:hover {
+			background-image: url(../images/btn_next_over.png);
+		}
+		
+		.bx-controls-direction a {
+			position: absolute;
+			top: 134px;
+			outline: 0;
+			width: 59px;
+			height: 59px;
+			text-indent: -9999px;
+			z-index: 9999;
+		}
+		
+		.bx-controls-direction a.disabled {
+			display: none;
+		}
+	}
 }
