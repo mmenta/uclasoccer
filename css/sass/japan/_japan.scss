@@ -253,7 +253,12 @@ section.letters {
 		}
 			
 		textarea { 
-			height: 117px; }
+			height: 50px; }
+
+		#message_counter {
+			text-align: right;
+			font-size: 12px;
+		}
 			
 		.cta {
 			border: 1px solid #1E5898;

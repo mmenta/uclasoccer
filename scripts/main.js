@@ -43,7 +43,8 @@ head.load(
 		if( japan ) {
 			head.load("/scripts/lib/jquery.colorbox.js");
 			head.load("/scripts/lib/jquery.countdown.js");
-			head.load("/scripts/lib/jquery.bxslider.min.js");			
+			head.load("/scripts/lib/jquery.bxslider.min.js");
+			head.load("/scripts/lib/jquery.counter.min.js");		
 			head.load("/scripts/pages/japan.js");			
 		}		
 		

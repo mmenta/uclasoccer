@@ -203,4 +203,11 @@
 		hideControlOnEnd: true,					
 		preloadImages: false
 	});
+
+/* textarea counter */
+	$("#message").counter({
+		count: 'down',
+		goal: 140
+	});	 
+
 }(window));
