@@ -1,14 +1,7 @@
 <?php
 // turn on error reporting
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-//$usersTwitter = array('uclasoccer', 'cromwellucla', 'joshwalterssr', 'louisek06', 'sammaysosa29', 'cwinter16', 'sammymewy'); 
-//$hashTwitter = '#bruinsinJapan';
-
-$hash = 'cleatsup';
-
-$model = $Model->getInstagramHash($hash, '');
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 
 
 // DB SETTIGNGS AND MYSQL CODE
@@ -21,6 +14,7 @@ if (strpos($_SERVER['HTTP_HOST'], "local") === false) {
 	//local server
 	$dbserver = "72.32.40.35";	
 }
+
 $dbusername = "512772_uclasoc";
 $dbpassword = "J@pan2014$";
 $dbname = "512772_uclasoccer";
@@ -53,7 +47,8 @@ $dbname = "512772_uclasoccer";
 <!-- all html for page goes here -->
 
 <section class="map">
-
+	
+	<!--
 	<div class="countdown">
     	<div class="counter">
             <div class="countdown_timer"></div>
@@ -68,8 +63,31 @@ $dbname = "512772_uclasoccer";
         <h1># CLEATS UP</h1>
     
     </div>
-
-	<img src="/images/static-map.jpg" />
+	-->
+	
+	<!--<img src="/images/static-map.jpg" />-->
+	
+	<div class="container sociallinks">
+		<img src="images/current-location.png" class="current-location" />
+		<a href="#">
+			<img src="images/marker-cleatsup.png" class="marker-cleatsup" />
+			<input type="hidden" class="hashtag" value="cleatsup" />
+		</a>
+		<a href="#">
+			<img src="images/marker-okinawa.png" class="marker-okinawa" />
+			<input type="hidden" class="hashtag" value="okinawa" />
+		</a>
+		<a href="#">
+			<img src="images/marker-tokyo.png" class="marker-tokyo" />
+			<input type="hidden" class="hashtag" value="tokyo" />
+		</a>
+		<a href="#">
+			<img src="images/marker-shizuoka.png" class="marker-shizuoka" />
+			<input type="hidden" class="hashtag" value="shizuoka" />
+		</a>
+	
+	
+	</div>
 
 </section>
 
@@ -85,9 +103,10 @@ $dbname = "512772_uclasoccer";
             <div class="items-wrap">
                 <ul id="items">
 					<?
+					/*
 						$cnn = mysql_connect($dbserver, $dbusername, $dbpassword);
 						$cmd = mysql_select_db($dbname, $cnn);							
-					
+						
                         $strSQL = "select full_name, city, message, UNIX_TIMESTAMP(timestamp) as utimestamp from texts order by timestamp desc";
                         $rst = mysql_query($strSQL);
                         
@@ -129,6 +148,7 @@ $dbname = "512772_uclasoccer";
                         }
 						
 						mysql_close($cnn);
+						*/
                     ?>                                
                 </ul>
 			</div>
@@ -175,9 +195,58 @@ $dbname = "512772_uclasoccer";
 
 
 <section class="social">
-<?php
-//echo '<pre>';
-//print_r($model);
-//echo '</pre>';
-?>
+
+	<div class="container">
+		<p class="sub-text">Posts from the team</p>
+		<h1 class="hashtag-label">#CLEATSUP</h1>
+		<img class="loading" src="images/icon-loader.gif" />
+		
+		<ul class="social-filter">
+			<li><a href="#" class="all"><img src="images/btn-filter-all.png" /></a></li>
+			<!--<li><a href="#" class="facebook"><img src="images/btn-filter-fb.png" /></a></li>-->
+			<li><a href="#" class="twitter"><img src="images/btn-filter-tw.png" /></a></li>
+			<li><a href="#" class="instagram"><img src="images/btn-filter-ig.png" /></a></li>
+		</ul>
+		
+		<ul class="box-wrap">
+			<!--rendered-->
+			
+		</ul>
+		
+		<input type="hidden" class="social-page" value="1" autocomplete="off" />
+		<input type="hidden" class="social-filter" value="all" autocomplete="off" />
+		<input type="hidden" class="social-hashtag" value="cleatsup" autocomplete="off" />
+		
+		<img class="loading-more" src="images/icon-loader.gif" />
+		<!--
+		<a href="#" class="cta">
+			<span class="top">Show</span><span class="bottom">More</span>
+		</a>
+		-->
+	</div> <!--/container-->
+
+
 </section>
+
+<?php if( !isset($_SESSION['view']) ) {?>
+<div class="boarding-pass-modal">
+	<p>Choose one of the following to get your boarding pass for</p>
+	<h1>#Bruinsinjapan</h1>
+	
+	<div class="btn-wrap">
+		<a href="https://www.facebook.com/UCLAWSoccer" target="_blank"><img src="../images/btn-like-fb.png" /></a>
+		<a href="https://twitter.com/UCLAWSoccer" target="_blank"><img src="../images/btn-like-tw.png" /></a>
+		<a href="http://instagram.com/uclawsoccer" target="_blank"><img src="../images/btn-like-ig.png" /></a>
+	</div>
+	
+	<a href="#" class="btn-close"><img src="../images/btn-close.jpg" /></a>
+</div>
+
+<div class="overlay"></div>
+<?php $_SESSION['view'] = 1; } ?>
+
+
+
+
+
+

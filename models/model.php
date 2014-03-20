@@ -81,7 +81,7 @@ class Model {
 		require_once($this->docroot . '/models/twitter.php');
 	
 		$Twitter = new Twitter($this->twitterHandle, '1');
-		$tweet = $Twitter->getPostHash($hash, $users);
+		$tweets = $Twitter->getPostHash($hash, $users);
 		
 		return $tweets;
 	}

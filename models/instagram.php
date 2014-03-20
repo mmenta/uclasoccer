@@ -80,14 +80,31 @@ class Instagram {
 	}
 	
 	function getPostHash($hash, $users) {
-	
-		$endpoint = 'https://api.instagram.com/v1/tags/'.$hash.'/media/recent?client_id='.$this->client_id;
 		
-	
-		$data = $this->doCurl($endpoint);
-	
-	
-		return $data;
+
+		
+			$endpoint = 'https://api.instagram.com/v1/tags/'.$hash.'/media/recent?client_id='.$this->client_id;
+			
+			$data = $this->doCurl($endpoint);
+			
+			
+		
+		
+			foreach( $data['data'] as $instagram ){
+			
+				if( in_array($instagram['user']['username'], $users) ){
+				
+					 $instagramArr[] = array('type' => 'instagram', 'id' => $instagram['id'], 'handle' => $instagram['user']['username'], 'text' => '', 'img' => $instagram['images']['standard_resolution']['url'], 'time' => $instagram['created_time']);
+				
+				}
+			
+			}
+
+		
+		
+		
+		//return $data;
+		return $instagramArr;
 	
 	}
 	

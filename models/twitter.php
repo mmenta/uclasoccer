@@ -52,7 +52,7 @@ class Twitter {
 	function getPostHash($hash, $users) {
 		//EXPENSIVE FUNCTION, try to find a better way to do this
 		foreach( $users as $user ) {
-			$from = urlencode('?'.$hash.'+AND+from:@'.$user);
+			$from = urlencode('?'.$hash.'+AND+from:@'.$user.'+exclude:retweets');
 			$query = 'https://api.twitter.com/1.1/search/tweets.json?q='.$from.'&result_type=recent';
 			$tweets = $this->twitter->get($query);
 			
@@ -61,9 +61,11 @@ class Twitter {
 				
 				//check for image
 				$img = isset( $tweet->entities->media[0]->media_url) ?  $tweet->entities->media[0]->media_url : "";
-
-				$tweetArr[] = array( 'id' => $tweet->id_str, 'user' => $tweet->user->name, 'text' => $tweet->text, 'img' => $img, 'date' => $date );
+				
+				$tweetArr[] = array( 'type' => 'twitter', 'id' => $tweet->id_str, 'handle' => $tweet->user->name, 'text' => $tweet->text, 'img' => $img, 'time' => $date );
 			}
+			
+			
 		}
 		
 		return $tweetArr;

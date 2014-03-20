@@ -1,6 +1,6 @@
-/* variables */
 @import url(sass/_includes/_normalize.css);
 @import url(sass/_includes/_colorbox.css);
+/* variables */
 @font-face {
   font-family: "oswaldregular";
   font-style: normal;
@@ -8,6 +8,7 @@
   /* IE 9 Compat Modes */
   src: url("fonts/oswaldregular.eot");
   src: url("fonts/oswald-regular.eot?") format("eot"), url("fonts/oswald-regular.woff") format("woff"), url("fonts/oswald-regular.ttf") format("truetype"), url("fonts/oswald-regular.svg") format("svg"); }
+
 @font-face {
   font-family: "oswaldlight";
   font-style: normal;
@@ -15,6 +16,7 @@
   /* IE 9 Compat Modes */
   src: url("fonts/oswald-light.eot");
   src: url("fonts/oswald-light.eot?") format("eot"), url("fonts/oswald-light.woff") format("woff"), url("fonts/oswald-light.ttf") format("truetype"), url("fonts/oswald-light.svg") format("svg"); }
+
 @font-face {
   font-family: "oswaldbold";
   font-style: normal;
@@ -22,6 +24,7 @@
   /* IE 9 Compat Modes */
   src: url("fonts/oswald-bold.eot");
   src: url("fonts/oswald-bold.eot?") format("eot"), url("fonts/oswald-bold.woff") format("woff"), url("fonts/oswald-bold.ttf") format("truetype"), url("fonts/oswald-bold.svg") format("svg"); }
+
 @font-face {
   font-family: "mission_scriptregular";
   font-style: normal;
@@ -29,6 +32,7 @@
   /* IE 9 Compat Modes */
   src: url("fonts/mission.eot");
   src: url("fonts/mission.eot?") format("eot"), url("fonts/mission.woff") format("woff"), url("fonts/mission.ttf") format("truetype"), url("fonts/mission.svg") format("svg"); }
+
 * {
   z-index: 1;
   margin: 0;
@@ -1123,53 +1127,76 @@ footer {
   background-color: #fff; }
 #japan .cta span.hoverstate {
   color: #4A74A7; }
-#japan section.map img {
+#japan section.map {
+  background: url(../images/static-map.png) no-repeat #1e5898 top center;
   width: 100%;
-  position: relative; }
-#japan section.map .countdown {
-  position: absolute;
-  width: 433px;
-  height: 251px;
-  background: #fed530;
-  z-index: 2;
-  top: 230px;
-  left: 50%;
-  margin-left: -216px;
-  color: #fff;
-  text-align: center; }
-#japan section.map .counter {
-  background: #edc445;
-  width: 397px;
-  height: 118px;
-  margin: 18px 18px 15px; }
-#japan section.map .countdown_timer {
-  font-family: "oswaldlight", sans-serif;
-  font-size: 58px;
-  margin: 3px 0 3px 65px;
-  padding: 2px 0; }
-#japan section.map .days {
-  width: 110px;
-  float: left; }
-#japan section.map .hrs {
-  width: 110px;
-  float: left; }
-#japan section.map .min {
-  width: 65px;
-  float: left; }
-#japan section.map .text1 {
-  float: left;
-  font-size: 14px;
-  margin-left: 80px; }
-#japan section.map .text2 {
-  float: left;
-  font-size: 14px;
-  margin-left: 72px; }
-#japan section.map .text3 {
-  float: left;
-  font-size: 14px;
-  margin-left: 82px; }
-#japan section.map .clear {
-  clear: both; }
+  height: 652px; }
+  #japan section.map .current-location {
+    position: absolute;
+    top: 355px;
+    left: 255px; }
+  #japan section.map .marker-cleatsup {
+    position: absolute;
+    top: 433px;
+    left: 166px;
+    cursor: pointer; }
+  #japan section.map .marker-okinawa {
+    position: absolute;
+    top: 509px;
+    left: 663px;
+    cursor: pointer; }
+  #japan section.map .marker-tokyo {
+    position: absolute;
+    top: 249px;
+    left: 876px; }
+  #japan section.map .marker-shizuoka {
+    position: absolute;
+    top: 345px;
+    left: 866px; }
+  #japan section.map .countdown {
+    position: absolute;
+    width: 433px;
+    height: 251px;
+    background: #fed530;
+    z-index: 2;
+    top: 230px;
+    left: 50%;
+    margin-left: -216px;
+    color: #fff;
+    text-align: center; }
+  #japan section.map .counter {
+    background: #edc445;
+    width: 397px;
+    height: 118px;
+    margin: 18px 18px 15px; }
+  #japan section.map .countdown_timer {
+    font-family: "oswaldlight", sans-serif;
+    font-size: 58px;
+    margin: 3px 0 3px 65px;
+    padding: 2px 0; }
+  #japan section.map .days {
+    width: 110px;
+    float: left; }
+  #japan section.map .hrs {
+    width: 110px;
+    float: left; }
+  #japan section.map .min {
+    width: 65px;
+    float: left; }
+  #japan section.map .text1 {
+    float: left;
+    font-size: 14px;
+    margin-left: 80px; }
+  #japan section.map .text2 {
+    float: left;
+    font-size: 14px;
+    margin-left: 72px; }
+  #japan section.map .text3 {
+    float: left;
+    font-size: 14px;
+    margin-left: 82px; }
+  #japan section.map .clear {
+    clear: both; }
 #japan section.letters {
   background: white;
   height: 406px; }
@@ -1354,3 +1381,48 @@ footer {
     z-index: 9999; }
   #japan .bx-wrapper .bx-controls-direction a.disabled {
     display: none; }
+#japan section.social {
+  padding-bottom: 100px;
+  background: #f2f2f2; }
+  #japan section.social .sub-text {
+    margin-top: 55px; }
+  #japan section.social .hashtag-label {
+    margin-top: 10px; }
+#japan .boarding-pass-modal {
+  position: fixed;
+  width: 997px;
+  height: 542px;
+  text-align: center;
+  background: url(../images/bg-boarding-pass.jpg) no-repeat;
+  left: 50%;
+  margin-left: -498px;
+  top: 50%;
+  margin-top: -250px;
+  z-index: 9999; }
+  #japan .boarding-pass-modal p {
+    margin-top: 55px;
+    font-family: "oswaldlight", sans-serif;
+    font-size: 21px;
+    color: #242424; }
+  #japan .boarding-pass-modal h1 {
+    font-family: "oswaldlight", sans-serif;
+    font-size: 27px;
+    color: #1e5898; }
+  #japan .boarding-pass-modal .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+  #japan .boarding-pass-modal .btn-wrap {
+    margin-top: 140px; }
+    #japan .boarding-pass-modal .btn-wrap a {
+      margin-right: 25px; }
+      #japan .boarding-pass-modal .btn-wrap a:last-child {
+        margin-right: 0; }
+#japan .overlay {
+  position: fixed;
+  top: 0;
+  background: #000;
+  opacity: 0.8;
+  z-index: 9998;
+  width: 100%;
+  height: 100%; }

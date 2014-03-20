@@ -113,7 +113,7 @@
 		</ul>
 		
 		<ul class="box-wrap">
-				
+			
 		</ul>
 		<input type="hidden" class="social-page" value="1" autocomplete="off" />
 		<input type="hidden" class="social-filter" value="all" autocomplete="off" />
