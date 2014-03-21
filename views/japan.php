@@ -107,7 +107,7 @@ $dbname = "512772_uclasoccer";
 						$cnn = mysql_connect($dbserver, $dbusername, $dbpassword);
 						$cmd = mysql_select_db($dbname, $cnn);							
 						
-                        $strSQL = "select full_name, city, message, UNIX_TIMESTAMP(timestamp) as utimestamp from texts order by timestamp desc";
+                        $strSQL = "select full_name, city, message, UNIX_TIMESTAMP(timestamp) as utimestamp from texts where type='text' and status=1 order by timestamp desc";
                         $rst = mysql_query($strSQL);
                         
                         while ($row = mysql_fetch_array($rst, MYSQL_ASSOC)) {
