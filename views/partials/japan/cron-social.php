@@ -20,12 +20,10 @@ $cmd = mysql_select_db($dbname, $cnn);
 
 ///-----------
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/models/model.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/models/social.php');
 
-$url = array('home');
-$Model = new Model($url);
+$Model = new Social();
 $page = isset($_GET['page']) ? $_GET['page'] : 1;		
-
 $hash = isset($_GET['hashtag']) ? $_GET['hashtag'] : "cleatsup";	
 
 

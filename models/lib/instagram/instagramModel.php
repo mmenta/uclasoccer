@@ -4,10 +4,8 @@ class Instagram {
 
 	private $client_id = '349b9ec41183472cb59373dd2ce9b83a';
 	
-	function __construct($user_id, $count) { // pass user id
-		$this->limit = $count;
-		
-		$this->url = 'https://api.instagram.com/v1/users/'.$user_id.'/media/recent?client_id='.$this->client_id.'&count=' . $this->limit;
+	function __construct($user_id) { // pass user id
+		$this->user_id = $user_id;
 	}
 	
 	function doCurl($url) {
@@ -23,11 +21,13 @@ class Instagram {
     	
     	return $data;
 	}
-		
-	function getPosts($page) {
+	
+	// pass page number for pagination and number of posts
+	function getPosts($page, $count) {
+		$url = 'https://api.instagram.com/v1/users/'.$this->user_id.'/media/recent?client_id='.$this->client_id.'&count=' . $count;
 		
 		// open curl connection
-		$data = $this->doCurl($this->url);
+		$data = $this->doCurl($url);
         
         //SUPER EXPENSIVE FUNCTION, find a better way to do pagination.
         $i = 1;
@@ -35,8 +35,8 @@ class Instagram {
             
             if( $i == $page ){
                 $max_id = isset($max_id) ? $max_id : "";	
-                $this->url = $this->url . '&max_id=' . $max_id;
-                $data = $this->doCurl($this->url);
+                $url = $url . '&max_id=' . $max_id;
+                $data = $this->doCurl($url);
                 
 		        foreach( $data['data'] as $instagram ) {	
 					//parse id
@@ -48,18 +48,18 @@ class Instagram {
             } else {
                 
                 $max_id = isset($max_id) ? $max_id : "";
-                $this->url = $this->url . '&max_id=' . $max_id;
-                $data = $this->doCurl($this->url);
+                $url = $url . '&max_id=' . $max_id;
+                $data = $this->doCurl($url);
                 
                 $max_id = $data['pagination']['next_max_id'];
             }
             $i++;
 		}
 		
-		//return $data;
 		return $instagramArr;
 	}
 	
+	// pass post id
 	function getPost($id) {
 		$url = 'http://api.instagram.com/oembed?url=http://instagram.com/p/'. $id;
 		
@@ -79,38 +79,25 @@ class Instagram {
 		return $instagramArr;
 	}
 	
+	// specific function that grabs posts with hashtag from specific users 
+	// pass hashtag and array of users
 	function getPostHash($hash, $users) {
-		
-
-		
 			$endpoint = 'https://api.instagram.com/v1/tags/'.$hash.'/media/recent?client_id='.$this->client_id;
-			
 			$data = $this->doCurl($endpoint);
 			
-			
-		
-		
-			foreach( $data['data'] as $instagram ){
-			
+			foreach( $data['data'] as $instagram ){	
 				if( in_array($instagram['user']['username'], $users) ){
 				
 					$first = explode('/p/', $instagram['link']);
 					$id = $first[1];
 				
 					 $instagramArr[] = array('type' => 'instagram', 'id' => $instagram['id'], 'handle' => $instagram['user']['username'], 'text' => '', 'img' => $instagram['images']['standard_resolution']['url'], 'time' => $instagram['created_time']);
-				
 				}
-			
 			}
 
-		
-		
-		
-		//return $data;
 		return $instagramArr;
 	
-	}
-	
+	}	
 }
 
 

@@ -43,7 +43,6 @@
 					var subtract = $(".title-bar").height() + $(".subnav").height() + 40 - 1;
 					var scrollPos = $(".render").offset().top - subtract;					
 					
-					/* REPLACE WITH CSS SCROLL */
 					// animate
 					shared.utils.scroll(scrollPos, t);
 					

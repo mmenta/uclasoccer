@@ -2,18 +2,15 @@
 
 (function() {
 
-
 	var japan = {
         
 		social : {
 			
 			render : function(rend) {		
-				var filter = $(".social-filter").val();
-				
-				$(".loading").show();
-				
-				var rend = 'html';
+				var filter = $(".social-filter").val();			
 				var hashtag = $(".social-hashtag").val();
+		
+				$(".loading").show();
 		
 				$.ajax({
 					type: "GET",
@@ -28,6 +25,17 @@
 					}
 					$(".loading").hide();
 				});
+			},
+			
+			scroll : function(scrollPos, t, effect) {
+				
+				t = typeof t !== 'undefined' ? t : 500;
+				effect = typeof effect !== 'undefined' ? effect : "easeOutExpo";
+				
+				$('html, body').animate({
+					scrollTop: scrollPos
+				 }, t, effect);
+			
 			},
 			
 			listeners : function() {
@@ -48,82 +56,40 @@
 				*/
 				$(".social-filter a").click(function(e) {
 					e.preventDefault();
-					//scroll to social
-					var scrollPos = $(".social").offset().top;
-					$('html, body').animate({
-						scrollTop: scrollPos - 60
-					 }, 300, 'easeOutQuad');
 					
-					$(".loading").show();
-					
-					//change filter type
-					var filter = $(this).attr('class');
-					$(".social-filter").val(filter);
-					//reset pagination
-					$(".social-page").val('1');
-					var hashtag = $(".social-hashtag").val();
-					var rend = 'html';
+					//scroll
+					var scrollPos = $(".social").offset().top - 60;
+					japan.social.scroll(scrollPos);
 
-					$.ajax({
-						type: "GET",
-						url: "/views/partials/japan/render-social.php",
-						data: { 'hashtag': hashtag, 
-								'type': filter }
-					}).done(function(data) {
-						if(rend == 'html') {
-							$(".social .box-wrap").html(data);
-						} else if(rend == 'append') {
-							$(".social .box-wrap").append(data);
-						}
-						
-						$(".loading").hide();
-					});
+					//change filter type
+					var rend = 'html'; //set to replace
+					$(".social-filter").val($(this).attr('class')); //set new filter
+					$(".social-page").val('1'); //reset pagination
 					
+					japan.social.render(rend);
 				});
 				
 				$(".sociallinks a").click(function(e) {
 					e.preventDefault();
+					
 					//scroll to social
-					var scrollPos = $(".social").offset().top;
-					$('html, body').animate({
-						scrollTop: scrollPos - 60
-					}, 300, 'easeOutQuad');
-				
-					$(".loading").show();
+					var scrollPos = $(".social").offset().top - 60;
+					japan.social.scroll(scrollPos);
 				
 					var hashtag = $(this).children(".hashtag").val();
-					var filter = 'all';
-					$(".social-filter").val(filter);
 					var rend = 'html';
-					
 					$(".social-hashtag").val(hashtag);
+					$(".social-filter").val('all');
 					
 					//change title
 					$(".hashtag-label").html("#" + hashtag);
 					
-					$.ajax({
-						type: "GET",
-						url: "/views/partials/japan/render-social.php",
-						data: { 'hashtag': hashtag, 
-								'type': filter }
-					}).done(function(data) {
-						if(rend == 'html') {
-							$(".social .box-wrap").html(data);
-						} else if(rend == 'append') {
-							$(".social .box-wrap").append(data);
-						}
-						
-						$(".loading").hide();
-					});
+					japan.social.render(rend);
 				
 				});
 				
 				$(".backtomap").click(function() {
-					var scrollPos = 0;
-					$('html, body').animate({
-						scrollTop: scrollPos
-					}, 300, 'easeOutQuad');
-				
+					japan.social.scroll(0);
 				});
 				
 				$("#japan").on("click", ".btn-close, .overlay, .btn-wrap a", function() {

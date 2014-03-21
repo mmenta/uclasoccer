@@ -2,11 +2,10 @@
 // turn on error reporting
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
-
-
 // DB SETTIGNGS AND MYSQL CODE
 
 # database setup
+/*
 if (strpos($_SERVER['HTTP_HOST'], "local") === false) {
 	//server
 	$dbserver = "mysql51-054.wc2.dfw1.stabletransit.com";	
@@ -18,6 +17,11 @@ if (strpos($_SERVER['HTTP_HOST'], "local") === false) {
 $dbusername = "512772_uclasoc";
 $dbpassword = "J@pan2014$";
 $dbname = "512772_uclasoccer";
+*/
+
+$db = new DB();
+$cnn = $db->openConn();
+
 
 	// TIME AGO FUNCTION
 	function ago($time) {
@@ -47,25 +51,6 @@ $dbname = "512772_uclasoccer";
 <!-- all html for page goes here -->
 
 <section class="map">
-	
-	<!--
-	<div class="countdown">
-    	<div class="counter">
-            <div class="countdown_timer"></div>
-            <div class="countlabels">
-                <div class="text1">Days</div>
-                <div class="text2">Hours</div>
-                <div class="text3">Min</div>
-                <div class="clear"></div>
-            </div>        
-        </div>
-    	<h2>UNTIL</h2>
-        <h1># CLEATS UP</h1>
-    
-    </div>
-	-->
-	
-	<!--<img src="/images/static-map.jpg" />-->
 	
 	<div class="container sociallinks">
 		<img src="images/current-location.png" class="current-location" />
@@ -103,7 +88,7 @@ $dbname = "512772_uclasoccer";
             <div class="items-wrap">
                 <ul id="items">
 					<?
-					
+						
 						$cnn = mysql_connect($dbserver, $dbusername, $dbpassword);
 						$cmd = mysql_select_db($dbname, $cnn);							
 						
@@ -147,7 +132,8 @@ $dbname = "512772_uclasoccer";
                     <?
                         }
 						
-						mysql_close($cnn);
+						//mysql_close($cnn);
+						$db->closeConn($cnn);
 						
                     ?>                                
                 </ul>

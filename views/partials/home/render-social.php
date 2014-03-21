@@ -1,13 +1,12 @@
 <?php
-// turn on error reporting
-//error_reporting(E_ALL);
-//ini_set('display_errors', 1);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/models/model.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/models/social.php');
 
-$url = array('home');
-$Model = new Model($url);
+$Model = new Social();
 $page = isset($_GET['page']) ? $_GET['page'] : 1;		
+
 
 switch($_GET['type']) {
 	case 'all':
