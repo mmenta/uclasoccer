@@ -2,51 +2,10 @@
 // turn on error reporting
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
-// DB SETTIGNGS AND MYSQL CODE
-
-# database setup
-/*
-if (strpos($_SERVER['HTTP_HOST'], "local") === false) {
-	//server
-	$dbserver = "mysql51-054.wc2.dfw1.stabletransit.com";	
-} else {
-	//local server
-	$dbserver = "72.32.40.35";	
-}
-
-$dbusername = "512772_uclasoc";
-$dbpassword = "J@pan2014$";
-$dbname = "512772_uclasoccer";
-*/
 
 $db = new DB();
 $cnn = $db->openConn();
-
-
-	// TIME AGO FUNCTION
-	function ago($time) {
-	   $periods = array("sec", "min", "hour", "day", "week", "month", "year", "decade");
-	   $lengths = array("60","60","24","7","4.35","12","10");
-	
-	   $now = time();
-	
-		   $difference     = $now - $time;
-		   $tense         = "ago";
-	
-	   for($j = 0; $difference >= $lengths[$j] && $j < count($lengths)-1; $j++) {
-		   $difference /= $lengths[$j];
-	   }
-	
-	   $difference = round($difference);
-	
-	   if($difference != 1) {
-		   $periods[$j].= "s";
-	   }
-	
-	   return "$difference $periods[$j] ago";
-	}
 ?>
-
 
 <!-- all html for page goes here -->
 
@@ -83,58 +42,55 @@ $cnn = $db->openConn();
 		<div class="letter-wrap">
         	<div class="controls">
                 <span class="top">LETTERS</span><span class="bottom">from Home</span>        
-			</div>   
-            
+			</div> 
+
             <div class="items-wrap">
                 <ul id="items">
 					<?
-						
-						$cnn = mysql_connect($dbserver, $dbusername, $dbpassword);
-						$cmd = mysql_select_db($dbname, $cnn);							
-						
-                        $strSQL = "select full_name, city, message, UNIX_TIMESTAMP(timestamp) as utimestamp from texts where type='text' and status=1 order by timestamp desc";
+                        $strSQL = "select type, handle, full_name, city, message, profile_photo, UNIX_TIMESTAMP(timestamp) as utimestamp from texts where ((type='text' and status=1) or (type='twitter' and message like '%postcard%')) order by timestamp desc";
                         $rst = mysql_query($strSQL);
+                        echo mysql_error();
                         
                         while ($row = mysql_fetch_array($rst, MYSQL_ASSOC)) {
-                            $full_name = $row["full_name"];
+                            $type = $row["type"];
+                            $handle = $row["handle"];
+                            $full_name = $row["full_name"];  
                             $city = $row["city"];
                             $message = $row["message"];	
+                            $profile_photo = $row["profile_photo"];	
                             $timestamp = $row["utimestamp"];								
 							
 							$timeago = ago($timestamp);
 					?>
-                            <!-- TWITTER POST -->
-<!--                             <li>
-                                <div class="overlay"></div>
-                                <div class="info">
-                                    <div class="photo"><img src="http://placehold.it/58x58" /></div>
-                                    <div class="profile">
-                                        16 min ago<br />
-                                        <strong>Amanda Cromwell</strong><br />
-                                        @CromwellUCLA
-                                    </div>
-                                    <div class="message">Excited to watch @UVAMensHoops beat the Cuse to win the #ACC  #proudalumni #Wahoowa</div>
-                                </div>                        
-                            </li>  -->                                               
-                            
-                            <!-- TEXT SUBMISSION -->
-                            <li>
-                                <div class="overlay"></div>
-                                <div class="info">
-                                    <div class="profile">
-                                        <?= $timeago ?><br />
-                                        <strong><?= $full_name ?></strong><br />
-                                        <?= $city ?>
-                                    </div>
-                                    <div class="message"><?= $message ?></div>
-                                </div>                        
-                            </li>                             
+
+							<? if ($type == "twitter") { ?>
+	                            <li>
+	                                <div class="overlay"></div>
+	                                <div class="info">
+	                                    <!-- <div class="photo"><img src="<?= $profile_photo ?>" width="58" height="58" /></div> -->
+	                                    <div class="profile">
+	                                        <?= $timeago ?><br />
+	                                        <strong><?= $handle ?></strong><br />
+	                                    </div>
+	                                    <div class="message"><?= $message ?></div>
+	                                </div>                        
+	                            </li>
+                            <? } else { ?>                                                
+	                            <li>
+	                                <div class="overlay"></div>
+	                                <div class="info">
+	                                    <div class="profile">
+	                                        <?= $timeago ?><br />
+	                                        <strong><?= $full_name ?></strong><br />
+	                                        <?= $city ?>
+	                                    </div>
+	                                    <div class="message"><?= $message ?></div>
+	                                </div>                        
+	                            </li>    
+                            <? } ?>                         
                     <?
                         }
-						
-						//mysql_close($cnn);
 						$db->closeConn($cnn);
-						
                     ?>                                
                 </ul>
 			</div>
@@ -153,7 +109,7 @@ $cnn = $db->openConn();
         
         <div class="compose">
             <h1>SEND A POSTCARD<br />TO THE TEAM</h1>
-            <div class="btn_tweet" onclick="window.open('http://twitter.com/home?status=[Insert text] %23BruinsInJapan %23Postcard http://bit.ly/1ihDkUB')"><img src="/images/icon-footer-tw.png"> SEND A TWEET TO THE TEAM</a></div>           
+            <div class="btn_tweet" onclick="window.open('http://twitter.com/home?status=Good luck! %23BruinsInJapan %23Postcard http://bit.ly/1ihDkUB')"><img src="/images/icon-footer-tw.png"> SEND A TWEET TO THE TEAM</a></div>           
             
             <div class="note">Note: Tweet must include #BruinsInJapan and<br />#Postcard to be displayed on site.</div>
             
@@ -219,13 +175,28 @@ $cnn = $db->openConn();
 
 <?php if( !isset($_SESSION['view']) ) {?>
 <div class="boarding-pass-modal">
-	<p>Choose one of the following to get your boarding pass for</p>
-	<h1>#Bruinsinjapan</h1>
-	
+	<div class="ticket">
+		<h3>Welcome to the #BruinsInJapan</h3>
+		<h1>ALL-ACCESS TRIP TRACKER!</h1>
+		<p>This is your official boarding pass to follow along as the UCLA Women's Soccer team travels through Japan.</p>
+		
+		<img src="images/ticket.jpg" class="image">
+	</div>
+
 	<div class="btn-wrap">
+		<div class="header">LIKE TO STAY UPDATED</div>
+		<p>Don't forget to like UCLA Women's Soccer on Facebook, Twitter and Instagram for more information.</p>
+
 		<a href="https://www.facebook.com/UCLAWSoccer" target="_blank"><img src="../images/btn-like-fb.png" /></a>
-		<a href="https://twitter.com/UCLAWSoccer" target="_blank"><img src="../images/btn-like-tw.png" /></a>
+		<a href="https://twitter.com/UCLAW
+		Soccer" target="_blank"><img src="../images/btn-like-tw.png" /></a>
 		<a href="http://instagram.com/uclawsoccer" target="_blank"><img src="../images/btn-like-ig.png" /></a>
+	</div>
+
+	<div class="jointrip">
+        <div class="cta">
+            <span class="top">JOIN THE</span><span class="bottom">Trip!</span>
+        </div>
 	</div>
 	
 	<a href="#" class="btn-close"><img src="../images/btn-close.jpg" /></a>

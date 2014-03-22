@@ -1,7 +1,7 @@
 <?php
 // turn on error reporting
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+#error_reporting(E_ALL);
+#ini_set('display_errors', 1);
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/models/social.php');
 
@@ -16,7 +16,7 @@ $usersInstagram = array('jwfutbol24', 'alininha89', 'samgreene29', 'cwint16', 'c
 
 switch($_GET['type']) {
 	case 'all':
-		$modelTwitter = $Model->getTwitterHash($hash, $usersTwitter); //CHANGE THIS TO "getTwitterHashDB($hash, $usersTwitter)"
+		$modelTwitter = $Model->getTwitterHashDB($hash, $usersTwitter);
 		$modelInstagram = $Model->getInstagramHash($hash, $usersInstagram);
 
 		$model = array_merge(
@@ -26,11 +26,11 @@ switch($_GET['type']) {
 				
 		break;
 	case 'twitter':
-		$model = $Model->getTwitterHash($hash, $usersTwitter); break; //CHANGE THIS TO "getTwitterHashDB($hash, $usersTwitter)"
+		$model = $Model->getTwitterHashDB($hash, $usersTwitter); break;
 	case 'instagram':
 		$model = $Model->getInstagramHash($hash, $usersInstagram); break;
 	default:
-		$modelTwitter = $Model->getTwitterHash($hash, $usersTwitter); //CHANGE THIS TO "getTwitterHashDB($hash, $usersTwitter)"
+		$modelTwitter = $Model->getTwitterHashDB($hash, $usersTwitter);
 		$modelInstagram = $Model->getInstagramHash($hash, $usersInstagram);
 
 		$model = array_merge(
@@ -49,29 +49,39 @@ echo '</pre>';
 */
 
 
-foreach( $model as $post ) {
+if (count($model) > 0) {
+
+	foreach( $model as $post ) {
 
 	if( $post['type'] == 'twitter' ) { ?>
 
-	<li class="twitter">
-		<p class="box-text"><?php echo $post['text']; ?></p>
-		<img class="icon" src="images/icon-social-tw.png" />
-		<h4 class="handle">@<?php echo $post['handle']; ?></h4>
-		<input type="hidden" class="id" value="<?php echo $post['id']; ?>" />
-	</li>
+		<li class="twitter">
+			<p class="box-text"><?php echo $post['text']; ?></p>
+			<img class="icon" src="images/icon-social-tw.png" />
+			<h4 class="handle">@<?php echo $post['handle']; ?></h4>
+			<input type="hidden" class="id" value="<?php echo $post['id']; ?>" />
+		</li>
 	
 	<?php
 	} elseif ( $post['type'] == 'instagram' ) { ?>
-	
-	<li class="instagram">
-		<img src="<?php echo $post['img']; ?>" class="bg-social" />
-		<img class="icon" src="images/icon-social-ig.png" />
-		<h4 class="handle">@<?php echo $post['handle']; ?></h4>
-		<input type="hidden" class="id" value="<?php echo $post['id']; ?>" />
-	</li>
+		<li class="instagram">
+			<img src="<?php echo $post['img']; ?>" class="bg-social" />
+			<img class="icon" src="images/icon-social-ig.png" />
+			<h4 class="handle">@<?php echo $post['handle']; ?></h4>
+			<input type="hidden" class="id" value="<?php echo $post['id']; ?>" />
+		</li>
 	
 	<?php
 	} 
+	}
+} else {
+
+	if ($hash == "tokyo") {
+		echo "<h1>Launching March 28</h1>";
+	} else if ($hash == "shizuoka") {
+		echo "<h1>Launching March 26</h1>";
+	}
 }
+
 
 ?>

@@ -13,7 +13,6 @@ class DB {
 			//local server
 			$this->dbserver = "72.32.40.35";	
 		}
-		
 		$this->dbusername = "512772_uclasoc";
 		$this->dbpassword = "J@pan2014$";
 		$this->dbname = "512772_uclasoccer";
@@ -21,7 +20,8 @@ class DB {
 	}
 
 	function openConn() {
-		$this->cnn = mysql_connect($this->dbserver, $this->dbusername, $this->dbpassword, $this->dbname);
+		$this->cnn = mysql_connect($this->dbserver, $this->dbusername, $this->dbpassword);
+		mysql_select_db($this->dbname);
 		
 		return $this->cnn;
 	}

@@ -92,7 +92,7 @@
 					japan.social.scroll(0);
 				});
 				
-				$("#japan").on("click", ".btn-close, .overlay, .btn-wrap a", function() {
+				$("#japan").on("click", ".btn-close, .overlay, .btn-wrap a, .jointrip .cta", function() {
 					
 					$(".boarding-pass-modal").fadeOut();
 					$(".overlay").fadeOut();

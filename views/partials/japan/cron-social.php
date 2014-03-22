@@ -69,19 +69,22 @@ foreach( $model as $post ) {
 	$handle = $post['handle'];
 	$date = $post['date'];
 	$img = $post['img'];
+	$profile_photo = $post['profile_photo'];
 
 	$handle = str_replace("'", "\'", $post['handle']);
 	$text = str_replace("'", "\'", $post['text']);
 
-	$strSQL = "SELECT id FROM texts WHERE post_id = '".$post_id."' LIMIT 1";
-	$query_check = mysql_query($strSQL)or die(mysql_error());
+	//if (strstr($text, "bruinsinjapan") || strstr($text, "cleatsup")) {
+		$strSQL = "SELECT id FROM texts WHERE post_id = '".$post_id."' LIMIT 1";
+		$query_check = mysql_query($strSQL)or die(mysql_error());
 
-	if (mysql_num_rows($query_check)==0) {
-		$strSQL = "insert into texts (type, post_id, full_name, handle, date, message, img) values ('".$type."','".$post_id."','".$handle."','".$handle."','".$time."','".$text."','".$img."');";
-		echo $strSQL."<br />";
-		$query_insert = mysql_query($strSQL)or die(mysql_error());								
-		echo mysql_error();				
-	}	
+		if (mysql_num_rows($query_check)==0) {
+			$strSQL = "insert into texts (type, post_id, full_name, handle, date, message, img, profile_photo) values ('".$type."','".$post_id."','".$name."','".$handle."','".$time."','".$text."','".$img."','".$profile_photo."');";
+			echo $strSQL."<br />";
+			$query_insert = mysql_query($strSQL)or die(mysql_error());								
+			echo mysql_error();				
+		}
+	//}	
 }
 
 mysql_close($cnn);

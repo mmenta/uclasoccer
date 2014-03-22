@@ -222,7 +222,8 @@ section.social {
   section.social .box-wrap {
     position: relative;
     float: left;
-    margin-top: 60px; }
+    margin-top: 60px;
+    width: 100%; }
     section.social .box-wrap li {
       position: relative;
       float: left;
@@ -1399,35 +1400,67 @@ footer {
     #japan section.social .backtomap:before {
       content: url(../images/arrow-blue-up.jpg); }
 #japan .boarding-pass-modal {
-  position: fixed;
+  position: absolute;
   width: 997px;
-  height: 542px;
+  height: 943px;
   text-align: center;
-  background: url(../images/bg-boarding-pass.jpg) no-repeat;
+  /* background: url(../images/bg-boarding-pass.jpg) no-repeat; */
+  background: #ffffff;
   left: 50%;
   margin-left: -498px;
-  top: 50%;
-  margin-top: -250px;
+  top: 10%;
   z-index: 9999; }
-  #japan .boarding-pass-modal p {
-    margin-top: 55px;
-    font-family: "oswaldlight", sans-serif;
-    font-size: 21px;
-    color: #242424; }
-  #japan .boarding-pass-modal h1 {
-    font-family: "oswaldlight", sans-serif;
-    font-size: 27px;
-    color: #1e5898; }
+  #japan .boarding-pass-modal .ticket {
+    padding: 39px 39px 0 39px; }
+    #japan .boarding-pass-modal .ticket p {
+      margin-top: 10px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      color: #242424; }
+    #japan .boarding-pass-modal .ticket h1 {
+      font-family: "oswaldlight", sans-serif;
+      font-size: 27px;
+      color: #1e5898; }
+    #japan .boarding-pass-modal .ticket h3 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
+      color: #1e5898;
+      font-weight: normal; }
+    #japan .boarding-pass-modal .ticket .image {
+      margin: 25px; }
   #japan .boarding-pass-modal .btn-close {
     position: absolute;
     top: 10px;
     right: 10px; }
   #japan .boarding-pass-modal .btn-wrap {
-    margin-top: 140px; }
+    width: 100%;
+    height: 170px;
+    background: #f2f2f2;
+    padding: 44px 0; }
     #japan .boarding-pass-modal .btn-wrap a {
       margin-right: 25px; }
       #japan .boarding-pass-modal .btn-wrap a:last-child {
         margin-right: 0; }
+    #japan .boarding-pass-modal .btn-wrap .header {
+      font-family: "oswaldlight", sans-serif;
+      font-size: 27px;
+      color: #1e5898; }
+    #japan .boarding-pass-modal .btn-wrap p {
+      margin-top: 10px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      color: #242424;
+      margin-bottom: 30px; }
+  #japan .boarding-pass-modal .jointrip {
+    width: 100%;
+    height: 182px;
+    background: #fdd444; }
+    #japan .boarding-pass-modal .jointrip .cta {
+      border: 1px solid #1E5898;
+      margin-top: 25px;
+      cursor: pointer; }
+      #japan .boarding-pass-modal .jointrip .cta span {
+        color: #1e5898; }
 #japan .overlay {
   position: fixed;
   top: 0;
