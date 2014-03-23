@@ -91,7 +91,7 @@ class Instagram {
 					$first = explode('/p/', $instagram['link']);
 					$id = $first[1];
 				
-					 $instagramArr[] = array('type' => 'instagram', 'id' => $instagram['id'], 'handle' => $instagram['user']['username'], 'text' => '', 'img' => $instagram['images']['standard_resolution']['url'], 'time' => $instagram['created_time']);
+					 $instagramArr[] = array('type' => 'instagram', 'id' => $id, 'handle' => $instagram['user']['username'], 'text' => '', 'img' => $instagram['images']['standard_resolution']['url'], 'time' => $instagram['created_time']);
 				}
 			}
 
