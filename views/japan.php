@@ -48,8 +48,8 @@ $cnn = $db->openConn();
                 <ul id="items">
 					<?
                         $strSQL = "select type, handle, full_name, city, message, profile_photo, UNIX_TIMESTAMP(timestamp) as utimestamp from texts where ((type='text' and status=1) or (type='twitter' and message like '%postcard%')) order by timestamp desc";
-                        $rst = mysql_query($strSQL);
-                        echo mysql_error();
+                        
+                        $rst = $db->query($strSQL);
                         
                         while ($row = mysql_fetch_array($rst, MYSQL_ASSOC)) {
                             $type = $row["type"];

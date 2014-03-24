@@ -29,7 +29,7 @@ class Instagram {
 		// open curl connection
 		$data = $this->doCurl($url);
         
-        //SUPER EXPENSIVE FUNCTION, find a better way to do pagination.
+        //SUPER EXPENSIVE FUNCTION, find a better way to do pagination for instagram.
         $i = 1;
         while($i <= $page) {
             
@@ -82,21 +82,27 @@ class Instagram {
 	// specific function that grabs posts with hashtag from specific users 
 	// pass hashtag and array of users
 	function getPostHash($hash, $users) {
-			$endpoint = 'https://api.instagram.com/v1/tags/'.$hash.'/media/recent?client_id='.$this->client_id;
-			$data = $this->doCurl($endpoint);
 			
-			foreach( $data['data'] as $instagram ){	
-				if( in_array($instagram['user']['username'], $users) ){
-				
-					$first = explode('/p/', $instagram['link']);
-					$id = $first[1];
-				
-					 $instagramArr[] = array('type' => 'instagram', 'id' => $id, 'handle' => $instagram['user']['username'], 'text' => '', 'img' => $instagram['images']['standard_resolution']['url'], 'time' => $instagram['created_time']);
-				}
+			$endpoint = 'https://api.instagram.com/v1/tags/'.$hash.'/media/recent?client_id='.$this->client_id.'&count=80';
+            			
+			for ( $i = 0; $i < 5; $i++ ) {
+			
+                $data = $this->doCurl($endpoint);
+			
+    			foreach( $data['data'] as $instagram ){	
+    				if( in_array($instagram['user']['username'], $users) ) {
+    				
+    					$first = explode('/p/', $instagram['link']);
+    					$id = $first[1];
+    				
+    					 $instagramArr[] = array('type' => 'instagram', 'id' => $id, 'handle' => $instagram['user']['username'], 'text' => '', 'img' => $instagram['images']['standard_resolution']['url'], 'time' => $instagram['created_time']);
+    				}
+    			}
+    			
+    			$endpoint = isset($data['pagination']['next_url']) ? $data['pagination']['next_url'] : NULL;    			
 			}
 
 		return $instagramArr;
-	
 	}	
 }
 

@@ -55,6 +55,7 @@ class Twitter {
 	
 	// specific function that grabs posts with hashtag from specific users 
 	// pass hashtag and array of users
+	// this function is no longer being used, posts being pulled from DB
 	function getPostHash($hash, $users) {
 		//EXPENSIVE FUNCTION, try to find a better way to do this
 
@@ -95,8 +96,8 @@ class Twitter {
 		$str_users = substr($str_users, 0, strlen($str_users)-4);
 
         $strSQL = "select post_id, handle, city, message, img, UNIX_TIMESTAMP(timestamp) as utimestamp from texts where type='twitter' and message like '%".$hash."%' and (".$str_users.") order by timestamp desc";
-        $rst = mysql_query($strSQL);
-        echo mysql_error();
+        
+        $rst = $this->db->query($strSQL);
         
         while ($row = mysql_fetch_array($rst, MYSQL_ASSOC)) {
             $post_id = $row["post_id"];
