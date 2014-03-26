@@ -85,7 +85,7 @@ class Instagram {
 			
 			$endpoint = 'https://api.instagram.com/v1/tags/'.$hash.'/media/recent?client_id='.$this->client_id.'&count=80';
             			
-			for ( $i = 0; $i < 5; $i++ ) {
+			for ( $i = 0; $i < 2; $i++ ) {
 			
                 $data = $this->doCurl($endpoint);
 			
@@ -104,6 +104,28 @@ class Instagram {
 
 		return $instagramArr;
 	}	
+	
+	// modified function to brab posts with multiple hashtags. 
+	// currently, first hashtag is hardcoded into function, we can change this to be more dynamic later.
+	function getPostHashMultiple($hash, $users) {
+    	
+    	$hashBase = 'bruinsinjapan'; // hardcode first hashtag
+    	
+    	$endpoint = 'https://api.instagram.com/v1/tags/'.$hashBase.'/media/recent?client_id='.$this->client_id.'&count=80';
+    	$data = $this->doCurl($endpoint);
+    	
+    	foreach( $data['data'] as $instagram ){	
+			if( (in_array($instagram['user']['username'], $users)) && (in_array($hash, $instagram['tags'])) ) {
+			
+				$first = explode('/p/', $instagram['link']);
+				$id = $first[1];
+			
+				 $instagramArr[] = array('type' => 'instagram', 'id' => $id, 'handle' => $instagram['user']['username'], 'text' => '', 'img' => $instagram['images']['standard_resolution']['url'], 'time' => $instagram['created_time']);
+			}
+		}
+
+    	return $instagramArr;
+	}
 }
 
 

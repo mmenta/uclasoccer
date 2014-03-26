@@ -27,8 +27,9 @@ class Twitter {
 		
 		foreach( $tweets as $tweet ) {
 			$time = strtotime($tweet->created_at);
+			$img = isset( $tweet->entities->media[0]->media_url) ?  $tweet->entities->media[0]->media_url : "";
 			
-			$twitterArr[] = array( 'type' => 'twitter', 'id' => $tweet->id_str, 'handle' => $tweet->user->screen_name, 'text' => $tweet->text, 'img' => '', 'time' => $time );
+			$twitterArr[] = array( 'type' => 'twitter', 'id' => $tweet->id_str, 'handle' => $tweet->user->screen_name, 'text' => $tweet->text, 'img' => $img, 'time' => $time );
 		}
 		return $twitterArr;
 	}

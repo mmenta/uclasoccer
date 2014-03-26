@@ -17,7 +17,7 @@ $usersInstagram = array('jwfutbol24', 'alininha89', 'samgreene29', 'cwint16', 'c
 switch($_GET['type']) {
 	case 'all':
 		$modelTwitter = $Model->getTwitterHashDB($hash, $usersTwitter);
-		$modelInstagram = $Model->getInstagramHash($hash, $usersInstagram);
+		$modelInstagram = $Model->getInstagramHashMultiple($hash, $usersInstagram);
 
 		$model = array_merge(
 					(array)$modelTwitter,
@@ -28,10 +28,10 @@ switch($_GET['type']) {
 	case 'twitter':
 		$model = $Model->getTwitterHashDB($hash, $usersTwitter); break;
 	case 'instagram':
-		$model = $Model->getInstagramHash($hash, $usersInstagram); break;
+		$model = $Model->getInstagramHashMultiple($hash, $usersInstagram); break;
 	default:
 		$modelTwitter = $Model->getTwitterHashDB($hash, $usersTwitter);
-		$modelInstagram = $Model->getInstagramHash($hash, $usersInstagram);
+		$modelInstagram = $Model->getInstagramHashMultiple($hash, $usersInstagram);
 
 		$model = array_merge(
 					(array)$modelTwitter,
@@ -56,8 +56,11 @@ if (count($model) > 0) {
 	if( $post['type'] == 'twitter' ) { ?>
 
 		<li class="twitter">
+		    <?php if( $post['img'] != "" ) { ?>
+	            <img src="<?php echo $post['img']; ?>" class="bg-social" />
+            <?php } ?>
 			<p class="box-text"><?php echo $post['text']; ?></p>
-			<img class="icon" src="images/icon-social-tw.png" />
+			<img class="icon" src="/images/icon-social-tw.png" />
 			<h4 class="handle">@<?php echo $post['handle']; ?></h4>
 			<input type="hidden" class="id" value="<?php echo $post['id']; ?>" />
 		</li>
@@ -66,7 +69,7 @@ if (count($model) > 0) {
 	} elseif ( $post['type'] == 'instagram' ) { ?>
 		<li class="instagram">
 			<img src="<?php echo $post['img']; ?>" class="bg-social" />
-			<img class="icon" src="images/icon-social-ig.png" />
+			<img class="icon" src="/images/icon-social-ig.png" />
 			<h4 class="handle">@<?php echo $post['handle']; ?></h4>
 			<input type="hidden" class="id" value="<?php echo $post['id']; ?>" />
 		</li>

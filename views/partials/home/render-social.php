@@ -27,6 +27,9 @@ foreach( $model as $post ) {
 	if( $post['type'] == 'twitter' ) { ?>
 
 	<li class="twitter">
+	    <?php if( $post['img'] != "" ) { ?>
+	        <img src="<?php echo $post['img']; ?>" class="bg-social" />
+	    <?php } ?>
 		<p class="box-text"><?php echo $post['text']; ?></p>
 		<img class="icon" src="images/icon-social-tw.png" />
 		<h4 class="handle">@<?php echo $post['handle']; ?></h4>

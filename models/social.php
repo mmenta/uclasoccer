@@ -74,6 +74,14 @@ class Social {
 		return $instagrams;
 	}
 	
+	// Gets all posts with multiple specific hashtags
+	function getInstagramHashMultiple($hash, $users) {
+		$Instagram  = new Instagram($this->instagramId);
+		$instagrams = $Instagram->getPostHashMultiple($hash, $users);
+		
+		return $instagrams;
+	}
+	
 	// FACEBOOK ========
 	
 	function getFacebook($page, $count) {

@@ -329,6 +329,14 @@ section.social {
 			&.twitter {
 				background: #1ca8e9;
 				
+				.bg-social {
+    			    position: absolute;
+    			    top: 0;
+    			    left: 0;
+    			    width: 280px;
+    			    max-height: 280px;
+				}
+				
 				.box-text {
 					display: table-cell;
 					vertical-align: middle;
