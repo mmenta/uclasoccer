@@ -54,11 +54,10 @@ if (count($model) > 0) {
 	foreach( $model as $post ) {
 
 	if( $post['type'] == 'twitter' ) { ?>
-
-		<li class="twitter">
 		    <?php if( $post['img'] != "" ) { ?>
-	            <img src="<?php echo $post['img']; ?>" class="bg-social" />
+		    	<li class="twitter" style="background-image: url(<?php echo $post['img']; ?>); background-position: center top; background-size: 100%; height: 280px; overflow: hidden; width: 280px;">
 	        <?php } else { ?>
+				<li class="twitter">	        
 	        	<p class="box-text"><?php echo $post['text']; ?></p>
             <?php } ?>
 			<img class="icon" src="/images/icon-social-tw.png" />
