@@ -2,13 +2,13 @@
 
 <html>
 <head>
-        <title>UCLA Soccer: Home of the 2013 NCAA National Champions</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>UCLA Soccer: Home of the 2013 NCAA National Champions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="description" content="Welcome to the home of the 2013 NCAA National Champions. UCLA Soccer is your source for the latest on our women's soccer staff, team and camps.">
 		<meta name="keywords" content="Ucla women's soccer,Ucla womens soccer,Ucla women soccer,Amanda Cromwell,Ucla soccer,Cromwell ucla,Ucla bruins soccer,Ucla soccer camp,Ucla soccer camps,Ucla,Ucla bruins,College soccer">                
-		<meta name="viewport" content="width=1200, initial-scale=2.0, maximum-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=1" />
 		<link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-        <link rel="stylesheet" type="text/css" media="all" href="/css/layout.css?<?php echo rand(0,100)?>" />
+    <link rel="stylesheet" type="text/css" media="all" href="/css/layout.css?<?php echo rand(0,100)?>" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 </head>
 

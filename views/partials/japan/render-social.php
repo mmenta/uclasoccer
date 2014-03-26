@@ -58,8 +58,9 @@ if (count($model) > 0) {
 		<li class="twitter">
 		    <?php if( $post['img'] != "" ) { ?>
 	            <img src="<?php echo $post['img']; ?>" class="bg-social" />
+	        <?php } else { ?>
+	        	<p class="box-text"><?php echo $post['text']; ?></p>
             <?php } ?>
-			<p class="box-text"><?php echo $post['text']; ?></p>
 			<img class="icon" src="/images/icon-social-tw.png" />
 			<h4 class="handle">@<?php echo $post['handle']; ?></h4>
 			<input type="hidden" class="id" value="<?php echo $post['id']; ?>" />
