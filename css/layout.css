@@ -903,7 +903,13 @@ footer {
   #camps section.academy .heading.bg-coaching {
     background: #1e5898; }
   #camps section.academy .heading.bg-florida {
-    background: #fed530; }
+    background: url(../images/bg-camps-cfsa.jpg) no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')"; }
   #camps section.academy .heading h1 {
     position: relative;
     display: block;

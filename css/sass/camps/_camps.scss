@@ -87,7 +87,8 @@ section.academy {
 		}
 		
 		&.bg-florida {
-			background: $yellow;
+			background: url(../images/bg-camps-cfsa.jpg) no-repeat top center;
+			@include full-width-background;
 		}		
 	
 		

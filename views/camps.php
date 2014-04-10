@@ -17,10 +17,10 @@
 
 <nav class="subnav">
 	<ul class="container">
-		<li <?php if($Model->subpage()=='academy' || $Model->subpage()==''){ echo 'class="active"'; } ?>><a href="/camps/academy">Amanda Cromwell Academy</a></li>
-		<li <?php if($Model->subpage()=='central-florida-soccer-academy'){ echo 'class="active"'; } ?>><a href="/camps/central-florida-soccer-academy">Central Florida Soccer Academy</a></li>        
+		<? /*<li <?php if($Model->subpage()=='academy' || $Model->subpage()==''){ echo 'class="active"'; } ?>><a href="/camps/academy">Amanda Cromwell Academy</a></li> */ ?>
+		<li <?php if($Model->subpage()=='central-florida-soccer-academy' || $Model->subpage()==''){ echo 'class="active"'; } ?>><a href="/camps/central-florida-soccer-academy">Central Florida Soccer Academy</a></li>        
 		<li <?php if($Model->subpage()=='ucla-camps'){ echo 'class="active"'; } ?>><a href="/camps/ucla-camps">UCLA Camps</a></li>
-		<li <?php if($Model->subpage()=='coaching-education'){ echo 'class="active"'; } ?>><a href="/camps/coaching-education">Coaching Education</a></li>
+		<? /*<li <?php if($Model->subpage()=='coaching-education'){ echo 'class="active"'; } ?>><a href="/camps/coaching-education">Coaching Education</a></li> */ ?>
 	</ul>
 </nav>
 

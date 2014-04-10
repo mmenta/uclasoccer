@@ -13,7 +13,7 @@
             July 13-16<br />
             NTC Clermont, FL<br />
             Hampton Inn<br />
-            Ages 12-18<br />
+            Ages 10-18<br />
             $475 (commuter), $525 (4/room), $550 (3/room), $600 (2/room)<br /><br />       
             
             <strong>Central Florida Soccer Academy College ID Camp</strong><br />                
