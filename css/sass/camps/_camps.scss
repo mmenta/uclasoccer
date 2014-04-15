@@ -1,241 +1,197 @@
 /* camp ================================ */
 
 #camps {
-
-.cta {					
-	&.hoverstate {
-	background-color: #fff; }
-	span.hoverstate {
-	color: #4A74A7; }	
-}	
-
-section.camp-header {
-	margin-top: 100px;
-	height: 695px;
-	
-	background: #007dc3;
-	
-	h1 {
-		display: block;
-		margin-top: 40px;
-		
-		font-size: 36px;
-		color: #fff;
-		text-align: center;
-		letter-spacing: 0;
-	}
-	
-	h3 {
-		display: block;
-		margin-top: 75px;
-		
-		font-family: $oswald-light;
-		font-size: 28px;
-		color: #fff;
-		text-align: center;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		line-height: 1.5em;
-		
-		.sub {
-			font-family: $mission;
-			font-size: 55px;
-			color: $yellow;
-			text-transform: none;
-		}
-	}
-	
-	p {
-		display: block;
-		margin-top: 40px;
-		
-		text-align: center;
-		font-size: 14px;
-		color: #fff;
-	}
-	
-	.cta {
-		display: block;
-		margin: 50px auto;
-	}
-	
-	.img-soccerball {
-		position: absolute;
-		top: -50px;
-		left: 50%;
-		margin-left: -140px;
-	}
+    .cta {
+        &.hoverstate {
+            background-color: #fff;
+        }
+        span.hoverstate {
+            color: #4A74A7;
+        }
+    }
+    section.camp-header {
+        margin-top: 100px;
+        height: 695px;
+        background: #007dc3;
+        h1 {
+            display: block;
+            margin-top: 40px;
+            font-size: 36px;
+            color: #fff;
+            text-align: center;
+            letter-spacing: 0;
+        }
+        h3 {
+            display: block;
+            margin-top: 75px;
+            font-family: $oswald-light;
+            font-size: 28px;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.5em;
+            .sub {
+                font-family: $mission;
+                font-size: 55px;
+                color: $yellow;
+                text-transform: none;
+            }
+        }
+        p {
+            display: block;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+        }
+        .cta {
+            display: block;
+            margin: 50px auto;
+        }
+        .img-soccerball {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            margin-left: -140px;
+        }
+    }
+    section.academy {
+        .heading {
+            height: 441px;
+            &.bg-academy {
+                background: url(../images/bg-academy.jpg) no-repeat top center;
+                @include full-width-background;
+            }
+            &.bg-camps {
+                background: url(../images/bg-camps.jpg) no-repeat top center;
+                @include full-width-background;
+            }
+            &.bg-coaching {
+                background: $blue;
+            }
+            &.bg-florida {
+                background: url(../images/bg-camps-cfsa.jpg) no-repeat top center;
+                @include full-width-background;
+            }
+            h1 {
+                position: relative;
+                display: block;
+                top: 175px;
+                font-size: 42px;
+                color: #fff;
+                text-align: center;
+                .sub {
+                    font-family: $mission;
+                    font-size: 48px;
+                    text-transform: none;
+                }
+            }
+        }
+        .section-content {
+            position: relative;
+            float: left;
+            width: 100%;
+            padding: 60px 0 80px;
+            background: #fff;
+            aside {
+                position: relative;
+                float: left;
+                width: 380px;
+                margin-right: 60px;
+                font-family: "Open Sans", sans-serif;
+                font-size: 14px;
+                color: #5a5a5a;
+                .logo-aca {
+                    margin-bottom: 50px;
+                    width: 380px;
+                }
+                h3 {
+                    font-family: $oswald-regular;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    color: $blue;
+                    letter-spacing: 2px;
+                }
+                ul {
+                    margin: 25px 0;
+                    li {
+                        margin-bottom: 3px;
+                        font-family: $open-sans;
+                        font-size: 14px;
+                        color: #5a5a5a;
+                    }
+                }
+                .cta {
+                    border-radius: 5px;
+                    width: 348px;
+                    height: auto;
+                    padding: 15px 0;
+                    margin-top: 50px;
+                    font-family: $oswald-regular;
+                    font-size: 18px;
+                    color: $yellow;
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+                .image-boxes {
+                    position: relative;
+                    float: left;
+                    margin-bottom: 40px;
+                    li {
+                        position: relative;
+                        float: left;
+                        margin: 0 10px 10px 0;
+                    }
+                }
+                h6 {
+                    margin-top: 40px;
+                    font-family: $open-sans;
+                    font-size: 12px;
+                    color: $grey;
+                }
+                .social-icons {
+                    margin-top: 10px;
+                    li {
+                        position: relative;
+                        float: left;
+                        margin-right: 1px;
+                    }
+                }
+            }
+            .content-info {
+                position: relative;
+                float: left;
+                width: 740px;
+                .tmb-video {
+                    position: relative;
+                    float: left;
+                    margin-bottom: 50px;
+                }
+                h2 {
+                    margin-bottom: 10px;
+                    font-size: 36px;
+                    color: $blue;
+                }
+                p {
+                    margin-bottom: 75px;
+                    font-size: 14px;
+                    color: #5a5a5a;
+                    line-height: 1.7em;
+                }
+                ul li {
+                    color: #5A5A5A;
+                    font-size: 14px;
+                    line-height: 1.7em;
+                    margin-bottom: 25px;
+                }
+                .cta span {
+                    color: $blue;
+                }
+            }
+        }
+    }
 }
 
-
-section.academy {
-	.heading {
-		height: 441px;
-		
-		&.bg-academy {
-			background: url(../images/bg-academy.jpg) no-repeat top center;
-			@include full-width-background;
-		}
-		
-		&.bg-camps {
-			background: url(../images/bg-camps.jpg) no-repeat top center;
-			@include full-width-background;
-		}
-		
-		&.bg-coaching {
-			background: $blue;
-		}
-		
-		&.bg-florida {
-			background: url(../images/bg-camps-cfsa.jpg) no-repeat top center;
-			@include full-width-background;
-		}		
-	
-		
-		h1 {
-			position: relative;
-			display: block;
-			top: 175px;
-			
-			font-size: 42px;
-			color: #fff;
-			text-align: center;
-			
-			.sub {
-				font-family: $mission;
-				font-size: 48px;
-				text-transform: none;
-			}
-		}
-	}
-	
-	.section-content {
-		position: relative;
-		float: left;
-		width: 100%;
-		padding: 60px 0 80px;
-		
-		background: #fff;
-		
-		aside {
-			position: relative;
-			float: left;
-			width: 380px;
-			margin-right: 60px;
-			font-family: "Open Sans", sans-serif;
-			font-size: 14px;
-			color: #5a5a5a; 			
-		
-			.logo-aca {
-				margin-bottom: 50px;
-				width: 380px;
-			}
-			
-			h3 {
-				font-family: $oswald-regular;
-				font-size: 18px;
-				text-transform: uppercase;
-				color: $blue;
-				letter-spacing: 2px;
-			}
-			
-			ul {
-				margin: 25px 0;
-				
-				li {
-					margin-bottom: 3px;
-					
-					font-family: $open-sans;
-					font-size: 14px;
-					color: #5a5a5a;
-				}
-			}
-			
-			.cta {
-				border-radius: 5px;
-				width: 348px;
-				height: auto;
-				padding: 15px 0;
-				margin-top: 50px;
-				
-				font-family: $oswald-regular;
-				font-size: 18px;
-				color: $yellow;
-				text-align: center;
-				text-transform: uppercase;
-				letter-spacing: 2px;
-			}
-			
-			.image-boxes {
-				position: relative;
-				float: left;
-				margin-bottom: 40px;
-				
-				li {
-					position: relative;
-					float: left;
-					margin: 0 10px 10px 0;
-				}
-			}
-			
-			h6 {
-				margin-top: 40px;
-				font-family: $open-sans;
-				font-size: 12px;
-				color: $grey;
-			}
-			
-			.social-icons {
-				margin-top: 10px;
-				
-				li {
-					position: relative;
-					float: left;
-					margin-right: 1px;
-				}
-			}
-		}
-	
-		.content-info {
-			position: relative;
-			float: left;
-			width: 740px;
-		
-			.tmb-video {
-				position: relative;
-				float: left;
-				margin-bottom: 50px;
-			}
-			
-			h2 {
-				margin-bottom: 10px;
-				
-				font-size: 36px;
-				color: $blue;
-			}
-			
-			p {
-				margin-bottom: 75px;
-				
-				font-size: 14px;
-				color: #5a5a5a;
-				line-height: 1.7em;
-			}
-			
-			ul li {			
-			    color: #5A5A5A;
-			    font-size: 14px;
-			    line-height: 1.7em;	
-				margin-bottom: 25px;						
-			}
-			
-			.cta span {
-				color: $blue;
-			}
-		}
-	}
-}
-
-
-
-} // camp
+// camp
